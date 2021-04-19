@@ -21,7 +21,6 @@ a {
 
 nav, section, footer {
   /*margin: 0 auto;*/
-  margin: 0 auto;
 }
 
 .container {
@@ -106,22 +105,19 @@ section.hero {
     p {
       font-weight: 300;
       letter-spacing: 2px;
-      line-height: 55px;
-      font-size: 2.5rem;
       margin: 10px auto 80px auto;
-      width: 90%;
+      width: 50%;
     }
 
     a {
       background: $secondary;
-      padding: 30px 80px;
+      padding: 20px 40px;
       border-radius: 100px;
-      font-size: 40px;
-      width: 200px;
-      margin-top: 20px;
+      font-size: 20px;
+      //width: 200px;
       color: white;
       opacity: 1;
-      margin: 22px 0 80px 0;
+      margin: 20px 0 80px 0;
     }
   }
 }
@@ -135,23 +131,25 @@ section.about {
   
   h1 {
     color: $secondary;
-    font-size: 59px;
-    margin: 200px 0 100px 0;
+    font-size: 30px;
+    margin: 100px 0 100px 0;
   }
   
   p {
-    width: 80%;
-    margin: 100px auto 100px auto;
-    font-size: 43px;
+    width: 50%;
+    margin: 40px auto 40px auto;
+    text-align: center;
+    font-size: 22px;
     color: $main_para;
   }
   
   .skills {
-    margin: 150px auto 50px auto;
+    margin: 100px auto 50px auto;
     text-align: center;
-    
+    width: 80%;
+
     h3 {
-      font-size: 59px;
+      font-size: 28px;
       color: $secondary;
     }
     
@@ -159,46 +157,65 @@ section.about {
       display: flex;
       flex-direction: row;
       flex-wrap: wrap;
-      width: 90%;
-      height: 260px;
-      margin: 0 auto;
       align-items: center;
       justify-content: center;
       
       li {
-        font-size: 35px;
+        font-size: 18px;
         margin: 20px;
         color: white;
         text-transform: uppercase;
+        background: $secondary;
+        padding: 15px 20px;
+        border-radius: 30px;
       }
     }
   }
 }
 
 footer {
-  grid-area:footer;
+  grid-area: footer;
   background: $primary;
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: space-around;
-  width: 100%;
+  //width: 100%;
   
   header {
     color: white;
-    font-size: 1.5em;
+    font-size: 35px;
   }
 
   ul {
-    width: 50%;
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
+
+    li {
+      font-size: 22px;
+      margin: 10px;
+    }
   }
 }
 
-@media only screen and (max-width: 950px) {
+@media only screen and (min-width: 780px) {
+
+  .hero-content {
+    h1 {
+      font-size: 29px;
+    }
+
+    p {
+      font-size: 22px;
+    }
+
+    a {
+      font-size: 22px;
+    }
+  }
+
   .container {
     grid-template-areas:
     "sidebar content"
@@ -208,26 +225,25 @@ footer {
     grid-template-rows: 1fr 1fr 150px;
 
     nav {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      //justify-content: center;
- 
+      position: relative;
+      top: 0;
+      display: block;
+      text-align: center;
+
       header {
-        position: fixed;
-        top: 100px;
+        position: relative;
+        margin-bottom: 100px;
       }
-      
+
       ul {
-        position: fixed;
         display: flex;
-        flex-direction: column;
         align-items: center;
-        justify-content: flex-start;
-        bottom: 100px;
-        
+        flex-direction: column;
+        justify-content: space-between;
+        height: 250px;
+
         li {
-          margin: 50px 0 50px 0;
+          font-size: 28px;
         }
       }
     }
@@ -237,6 +253,10 @@ footer {
       ul {
         justify-content: space-between;
         width: 60%;
+
+        li {
+          font-size: 28px;
+        }
       }
     }
   }

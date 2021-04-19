@@ -14,74 +14,112 @@ a {
 
 nav, section, footer {
   /*margin: 0 auto;*/
-  margin: 0 auto;
 }
 
 .container {
   height: 200vh;
+  display: -ms-grid;
   display: grid;
-  grid-template-areas: "sidebar" "content" "about" "footer";
-  grid-template-columns: 1fr;
-  grid-template-rows: 150px 1fr 1fr 125px;
+      grid-template-areas: "sidebar" "content" "about" "footer";
+  -ms-grid-columns: 1fr;
+      grid-template-columns: 1fr;
+  -ms-grid-rows: 150px 1fr 1fr 125px;
+      grid-template-rows: 150px 1fr 1fr 125px;
   font-size: 32px;
 }
 
 nav {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
   grid-area: sidebar;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: space-around;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
   width: 100%;
   background: #090b1a;
   color: white;
 }
+
 nav ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: space-around;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
   width: 50%;
 }
+
 nav ul li {
   opacity: 0.7;
 }
+
 nav ul li:hover {
   opacity: 1;
 }
 
 section.hero {
+  -ms-grid-row: 2;
+  -ms-grid-column: 1;
   grid-area: content;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-flow: column;
-  align-items: center;
-  justify-content: space-evenly;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column;
+          flex-flow: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
   background: #090b1a;
   opacity: 0.95;
   color: rgba(255, 255, 255, 0.75);
   width: 100%;
 }
+
 section.hero .avatar {
   width: 400px;
   height: 400px;
   border-radius: 200px;
   overflow: hidden;
 }
+
 section.hero .avatar img {
   position: relative;
   width: 100%;
   height: 100%;
 }
+
 section.hero .hero-content {
   padding: 12px;
   text-align: center;
   margin: 0 auto;
   /* display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-  */
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+*/
 }
+
 section.hero .hero-content h1 {
   font-weight: 800;
   opacity: 1;
@@ -89,123 +127,191 @@ section.hero .hero-content h1 {
   letter-spacing: 2px;
   margin: 10px auto 50px auto;
 }
+
 section.hero .hero-content p {
   font-weight: 300;
   letter-spacing: 2px;
-  line-height: 55px;
-  font-size: 2.5rem;
   margin: 10px auto 80px auto;
-  width: 90%;
+  width: 50%;
 }
+
 section.hero .hero-content a {
   background: #aa5cdb;
-  padding: 30px 80px;
+  padding: 20px 40px;
   border-radius: 100px;
-  font-size: 40px;
-  width: 200px;
-  margin-top: 20px;
+  font-size: 20px;
   color: white;
   opacity: 1;
-  margin: 22px 0 80px 0;
+  margin: 20px 0 80px 0;
 }
 
 section.about {
+  -ms-grid-row: 3;
+  -ms-grid-column: 1;
   grid-area: about;
   padding: 16px;
   background: #090b1a;
   color: white;
   text-align: center;
 }
+
 section.about h1 {
   color: #aa5cdb;
-  font-size: 59px;
-  margin: 200px 0 100px 0;
+  font-size: 30px;
+  margin: 100px 0 100px 0;
 }
+
 section.about p {
-  width: 80%;
-  margin: 100px auto 100px auto;
-  font-size: 43px;
+  width: 50%;
+  margin: 40px auto 40px auto;
+  text-align: center;
+  font-size: 22px;
   color: rgba(255, 255, 255, 0.75);
 }
+
 section.about .skills {
-  margin: 150px auto 50px auto;
+  margin: 100px auto 50px auto;
   text-align: center;
+  width: 80%;
 }
+
 section.about .skills h3 {
-  font-size: 59px;
+  font-size: 28px;
   color: #aa5cdb;
 }
+
 section.about .skills ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  width: 90%;
-  height: 260px;
-  margin: 0 auto;
-  align-items: center;
-  justify-content: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
+
 section.about .skills ul li {
-  font-size: 35px;
+  font-size: 18px;
   margin: 20px;
   color: white;
   text-transform: uppercase;
+  background: #aa5cdb;
+  padding: 15px 20px;
+  border-radius: 30px;
 }
 
 footer {
+  -ms-grid-row: 4;
+  -ms-grid-column: 1;
   grid-area: footer;
   background: #090b1a;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: space-around;
-  width: 100%;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
 }
+
 footer header {
   color: white;
-  font-size: 1.5em;
-}
-footer ul {
-  width: 50%;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: space-between;
+  font-size: 35px;
 }
 
-@media only screen and (max-width: 950px) {
+footer ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+footer ul li {
+  font-size: 22px;
+  margin: 10px;
+}
+
+@media only screen and (min-width: 780px) {
+  .hero-content h1 {
+    font-size: 29px;
+  }
+  .hero-content p {
+    font-size: 22px;
+  }
+  .hero-content a {
+    font-size: 22px;
+  }
   .container {
-    grid-template-areas: "sidebar content" "sidebar about" "sidebar footer";
-    grid-template-columns: 200px 1fr;
-    grid-template-rows: 1fr 1fr 150px;
+        grid-template-areas: "sidebar content" "sidebar about" "sidebar footer";
+    -ms-grid-columns: 200px 1fr;
+        grid-template-columns: 200px 1fr;
+    -ms-grid-rows: 1fr 1fr 150px;
+        grid-template-rows: 1fr 1fr 150px;
   }
   .container nav {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    position: relative;
+    top: 0;
+    display: block;
+    text-align: center;
   }
   .container nav header {
-    position: fixed;
-    top: 100px;
+    position: relative;
+    margin-bottom: 100px;
   }
   .container nav ul {
-    position: fixed;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: flex-start;
-    bottom: 100px;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    height: 250px;
   }
   .container nav ul li {
-    margin: 50px 0 50px 0;
+    font-size: 28px;
   }
   .container footer {
-    justify-content: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
   }
   .container footer ul {
-    justify-content: space-between;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
     width: 60%;
   }
+  .container footer ul li {
+    font-size: 28px;
+  }
 }
-
 /*# sourceMappingURL=index.css.map */

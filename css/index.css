@@ -6,7 +6,7 @@ body {
 }
 
 * {
-  font-family: 'Nunito Sans', sans-serif;
+  font-family: "Nunito Sans", sans-serif;
 }
 
 ul {
@@ -20,89 +20,52 @@ a {
 
 .container {
   height: 200vh;
-  display: -ms-grid;
   display: grid;
-      grid-template-areas: "sidebar" "content" "about" "footer";
-  -ms-grid-columns: 1fr;
-      grid-template-columns: 1fr;
-  -ms-grid-rows: 70px 1fr 1fr 90px;
-      grid-template-rows: 70px 1fr 1fr 90px;
+  grid-template-areas: "sidebar" "content" "about" "footer";
+  grid-template-columns: 1fr;
+  grid-template-rows: 70px 1fr 1fr 90px;
   font-size: 32px;
 }
 
 nav {
-  -ms-grid-row: 1;
-  -ms-grid-column: 1;
   grid-area: sidebar;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
   width: 100%;
   background: #090b1a;
   color: white;
 }
-
 nav header {
   font-size: 18px;
 }
-
 nav ul {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
   width: 50%;
 }
-
 nav ul li {
   opacity: 0.7;
   font-size: 17px;
 }
-
 nav ul li:hover {
   opacity: 1;
 }
 
 section.hero {
-  -ms-grid-row: 2;
-  -ms-grid-column: 1;
   grid-area: content;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-flow: column;
-          flex-flow: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: space-evenly;
-      -ms-flex-pack: space-evenly;
-          justify-content: space-evenly;
+  flex-flow: column;
+  align-items: center;
+  justify-content: space-evenly;
   background: #090b1a;
   opacity: 0.95;
   color: rgba(255, 255, 255, 0.75);
   width: 100%;
 }
-
 section.hero .avatar {
   width: 300px;
   height: 300px;
@@ -110,24 +73,21 @@ section.hero .avatar {
   overflow: hidden;
   margin: 10px 0 10px 0;
 }
-
 section.hero .avatar img {
   position: relative;
   width: 100%;
   height: 100%;
 }
-
 section.hero .hero-content {
   padding: 12px;
   text-align: center;
   margin: 0 auto;
   /* display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-*/
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+  */
 }
-
 section.hero .hero-content h1 {
   font-weight: 700;
   opacity: 1;
@@ -136,15 +96,13 @@ section.hero .hero-content h1 {
   margin: 10px auto 50px auto;
   font-size: 25px;
 }
-
 section.hero .hero-content p {
   font-weight: 300;
   letter-spacing: 2px;
   margin: 10px auto 80px auto;
-  width: 50%;
+  width: 70%;
   font-size: 18px;
 }
-
 section.hero .hero-content a {
   background: #aa5cdb;
   padding: 20px 40px;
@@ -155,59 +113,43 @@ section.hero .hero-content a {
 }
 
 section.about {
-  -ms-grid-row: 3;
-  -ms-grid-column: 1;
   grid-area: about;
-  padding: 16px;
   background: #090b1a;
   color: white;
   text-align: center;
   opacity: 0.95;
 }
-
 section.about h1 {
   color: #aa5cdb;
   font-size: 30px;
   margin: 100px 0 100px 0;
 }
-
 section.about p {
-  width: 50%;
+  width: 70%;
   margin: 40px auto 40px auto;
   text-align: center;
   font-size: 19px;
   color: rgba(255, 255, 255, 0.75);
 }
-
 section.about .skills {
   margin: 100px auto 50px auto;
   text-align: center;
-  width: 80%;
+  width: 90%;
 }
-
 section.about .skills h3 {
   font-size: 28px;
   color: #aa5cdb;
 }
-
 section.about .skills ul {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
 }
-
 section.about .skills ul li {
   font-size: 14px;
-  margin: 20px;
+  margin: 3px;
   color: white;
   text-transform: uppercase;
   background: #aa5cdb;
@@ -216,51 +158,28 @@ section.about .skills ul li {
 }
 
 footer {
-  -ms-grid-row: 4;
-  -ms-grid-column: 1;
   grid-area: footer;
   background: #090b1a;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
 }
-
 footer .header {
   color: white;
   font-size: 25px;
 }
-
 footer ul {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
 }
-
 footer ul li {
   font-size: 16px;
   margin: 10px;
   opacity: 0.6;
 }
-
 footer ul li:hover {
   opacity: 1;
 }
@@ -272,12 +191,11 @@ footer ul li:hover {
   .hero-content p, .hero-content a {
     font-size: 20px;
   }
+
   .container {
-        grid-template-areas: "sidebar content" "sidebar about" "sidebar footer";
-    -ms-grid-columns: 200px 1fr;
-        grid-template-columns: 200px 1fr;
-    -ms-grid-rows: 1fr 1fr 150px;
-        grid-template-rows: 1fr 1fr 150px;
+    grid-template-areas: "sidebar content" "sidebar about" "sidebar footer";
+    grid-template-columns: 200px 1fr;
+    grid-template-rows: 1fr 1fr 150px;
   }
   .container nav {
     position: relative;
@@ -291,42 +209,28 @@ footer ul li:hover {
     font-size: 24px;
   }
   .container nav ul {
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+    justify-content: space-between;
     height: 250px;
   }
   .container nav ul li {
     font-size: 17px;
   }
   .container footer {
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
+    justify-content: space-between;
+    align-items: center;
   }
   .container footer .header {
     font-size: 18px;
   }
   .container footer ul {
-    -webkit-box-pack: space-evenly;
-        -ms-flex-pack: space-evenly;
-            justify-content: space-evenly;
+    justify-content: space-evenly;
   }
   .container footer ul li {
     font-size: 16px;
   }
 }
+
 /*# sourceMappingURL=index.css.map */

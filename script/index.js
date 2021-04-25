@@ -1,4 +1,4 @@
-function translate(sentence) {
+/*function translate(sentence) {
   const rev = sentence.split(' ');
   const capAlphabet = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'.split('');
 
@@ -21,3 +21,12 @@ function translate(sentence) {
 }
 
 console.log(translate('Hello World'))
+*/
+
+let numbers = []
+
+for(let i = 1; i <= 100; i++){
+  numbers.push(i);
+}
+
+numbers.pop();

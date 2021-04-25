@@ -19,11 +19,11 @@ a {
 }
 
 .container {
-  height: 200vh;
+  height: 300vh;
   display: grid;
-  grid-template-areas: "sidebar" "content" "about" "footer";
+  grid-template-areas: "sidebar" "content" "about" "projects" "footer";
   grid-template-columns: 1fr;
-  grid-template-rows: 70px 1fr 1fr 90px;
+  grid-template-rows: 40px 1fr 1fr 1fr 40px;
   font-size: 32px;
 }
 
@@ -38,7 +38,7 @@ nav {
   color: white;
 }
 nav header {
-  font-size: 18px;
+  font-size: 15px;
 }
 nav ul {
   display: flex;
@@ -49,7 +49,7 @@ nav ul {
 }
 nav ul li {
   opacity: 0.7;
-  font-size: 17px;
+  font-size: 12px;
 }
 nav ul li:hover {
   opacity: 1;
@@ -67,9 +67,9 @@ section.hero {
   width: 100%;
 }
 section.hero .avatar {
-  width: 300px;
-  height: 300px;
-  border-radius: 150px;
+  width: 200px;
+  height: 200px;
+  border-radius: 100px;
   overflow: hidden;
   margin: 10px 0 10px 0;
 }
@@ -93,23 +93,24 @@ section.hero .hero-content h1 {
   opacity: 1;
   color: #aa5cdb;
   letter-spacing: 2px;
-  margin: 10px auto 50px auto;
+  margin: 10px auto 20px auto;
   font-size: 25px;
 }
 section.hero .hero-content p {
   font-weight: 300;
   letter-spacing: 2px;
-  margin: 10px auto 80px auto;
+  margin: 10px auto 20px auto;
   width: 70%;
   font-size: 18px;
 }
 section.hero .hero-content a {
   background: #aa5cdb;
-  padding: 20px 40px;
+  padding: 15px 30px;
   border-radius: 100px;
   font-size: 18px;
   color: white;
   z-index: 5;
+  margin-bottom: 20px;
 }
 
 section.about {
@@ -122,7 +123,7 @@ section.about {
 section.about h1 {
   color: #aa5cdb;
   font-size: 30px;
-  margin: 100px 0 100px 0;
+  margin: 50px 0 0 0;
 }
 section.about p {
   width: 70%;
@@ -133,10 +134,10 @@ section.about p {
 }
 section.about .skills {
   margin: 100px auto 50px auto;
-  text-align: center;
-  width: 90%;
+  width: 100%;
 }
 section.about .skills h3 {
+  text-align: center;
   font-size: 28px;
   color: #aa5cdb;
 }
@@ -144,17 +145,83 @@ section.about .skills ul {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  align-items: center;
-  justify-content: center;
+  justify-content: space-evenly;
+  width: 80%;
+  margin: 10px auto 10px 0;
+  background: #090b1a;
 }
 section.about .skills ul li {
   font-size: 14px;
   margin: 3px;
   color: white;
-  text-transform: uppercase;
   background: #aa5cdb;
   padding: 10px 20px;
   border-radius: 30px;
+}
+
+section.projects {
+  grid-area: projects;
+  width: 100%;
+  text-align: center;
+  background: #090b1a;
+  opacity: 0.95;
+}
+section.projects h1 {
+  margin: 20px auto 15px auto;
+  font-size: 24px;
+  color: #aa5cdb;
+}
+section.projects .project-list {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-around;
+}
+section.projects .project-list .project-card {
+  text-align: center;
+  height: 180px;
+  background: #1b1938;
+  border-radius: 8px;
+  margin: 20px auto 20px auto;
+}
+section.projects .project-list .project-card h1 {
+  font-size: 18px;
+}
+section.projects .project-list .project-card p {
+  font-size: 14px;
+  color: rgba(255, 255, 255, 0.75);
+  width: 80%;
+  margin: 0 auto 5px auto;
+  font-weight: 500;
+}
+section.projects .project-list .project-card .tech-list {
+  list-style: none;
+  font-size: 12px;
+  display: flex;
+  color: white;
+  width: 50%;
+  margin: 20px auto 0 auto;
+  text-align: center;
+}
+section.projects .project-list .project-card .tech-list li {
+  text-transform: uppercase;
+  text-align: center;
+  color: white;
+  padding: 8px;
+  font-weight: 300;
+}
+section.projects .project-list .project-card .links a {
+  font-size: 13px;
+  text-transform: uppercase;
+  font-weight: 600;
+  margin: 0 20px 0 20px;
+}
+section.projects .project-list .project-card .links span {
+  position: relative;
+  width: 100%;
+  border-radius: 6px;
+  height: 100%;
+  background: white;
 }
 
 footer {
@@ -167,7 +234,7 @@ footer {
 }
 footer .header {
   color: white;
-  font-size: 25px;
+  font-size: 15px;
 }
 footer ul {
   display: flex;
@@ -176,7 +243,7 @@ footer ul {
   justify-content: space-between;
 }
 footer ul li {
-  font-size: 16px;
+  font-size: 12px;
   margin: 10px;
   opacity: 0.6;
 }
@@ -193,9 +260,9 @@ footer ul li:hover {
   }
 
   .container {
-    grid-template-areas: "sidebar content" "sidebar about" "sidebar footer";
-    grid-template-columns: 200px 1fr;
-    grid-template-rows: 1fr 1fr 150px;
+    grid-template-areas: "sidebar content" "sidebar about" "sidebar projects" "sidebar footer";
+    grid-template-columns: 120px 1fr;
+    grid-template-rows: 1fr 1fr 1fr 40px;
   }
   .container nav {
     position: relative;
@@ -230,6 +297,11 @@ footer ul li:hover {
   }
   .container footer ul li {
     font-size: 16px;
+  }
+
+  .project-card {
+    position: relative;
+    width: 250px;
   }
 }
 

@@ -200,7 +200,7 @@ section.projects .project-list .project-card .tech-list {
   display: flex;
   color: white;
   width: 50%;
-  margin: 20px auto 0 auto;
+  margin: 2px auto 0 auto;
   text-align: center;
 }
 section.projects .project-list .project-card .tech-list li {
@@ -208,13 +208,13 @@ section.projects .project-list .project-card .tech-list li {
   text-align: center;
   color: white;
   padding: 8px;
-  font-weight: 300;
+  font-weight: 500;
 }
 section.projects .project-list .project-card .links a {
-  font-size: 13px;
+  font-size: 11px;
   text-transform: uppercase;
   font-weight: 600;
-  margin: 0 20px 0 20px;
+  margin: 0 20px 20px 20px;
 }
 section.projects .project-list .project-card .links span {
   position: relative;

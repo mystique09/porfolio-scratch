@@ -238,7 +238,7 @@ section.projects {
         //flex-wrap: wrap;
         //justify-content: center;
         //align-items: center;
-        margin: 20px auto 0 auto;
+        margin: 2px auto 0 auto;
         text-align: center;
         li {
           text-transform: uppercase;
@@ -246,17 +246,17 @@ section.projects {
           color: white;
           //margin-left: 5px;
           padding: 8px;
-          font-weight: 300;
+          font-weight: 500;
         }
       }
       
       .links {
         //margin-top: -10px;
         a {
-          font-size: 13px;
+          font-size: 11px;
           text-transform: uppercase;
           font-weight: 600;
-          margin: 0 20px 0 20px;
+          margin: 0 20px 20px 20px;
         }
         
         span {

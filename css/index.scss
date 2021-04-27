@@ -15,6 +15,7 @@ body {
 
 * {
   font-family: 'Nunito Sans', sans-serif;
+  scroll-behavior: smooth;
 }
 
 ul {
@@ -37,7 +38,7 @@ a {
   "contact"
   "footer";
   grid-template-columns: 1fr;
-  grid-template-rows: 40px repeat(4,1fr) 40px;
+  grid-template-rows: 40px repeat(3,1fr) 250px 40px;
   font-size: 32px;
 }
 
@@ -165,8 +166,6 @@ section.about {
   
   .skills {
     margin: 10px auto 50px auto;
-    width: 100%;
-
     h3 {
       text-align: center;
       font-size: 28px;
@@ -341,7 +340,7 @@ footer {
     "sidebar contact"
     "footer footer";
     grid-template-columns: 120px 1fr;
-    grid-template-rows: repeat(3,1fr) 200px 70px;
+    grid-template-rows: repeat(3, 1fr) 250px 70px;
 
     nav {
       position: relative;
@@ -366,6 +365,10 @@ footer {
           font-size: 17px;
         }
       }
+    }
+
+    .skills {
+      width: 80%;
     }
     
     footer {

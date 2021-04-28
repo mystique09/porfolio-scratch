@@ -1,4 +1,5 @@
 [[headers]]
-for = "/*"
-[headers.values]
-Access-Control-Allow-Origin = "*"
+  for = "/*.woff"
+  [headers.values]
+    Access-Control-Allow-Origin = "*"
+    Content-Type = "application/font-woff"

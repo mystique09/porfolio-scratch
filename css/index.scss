@@ -1,11 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300;400;700&display=swap');
 
-$primary: hsl(233, 47%, 7%);
-$card_bg: hsl(244, 38%, 16%);
-$secondary: hsl(277, 64%, 61%);
-$heading_stat: hsl(0, 0%, 100%);
-$main_para: hsla(0, 0%, 100%, 0.75);
-$stat_heading: hsla(0, 0%, 100%, 0.6);
+$primary: #161925; //hsl(233, 47%, 7%);
+$card_bg: #23395B;//hsl(244, 38%, 16%);
+$secondary: #406E8E;//hsl(277, 64%, 61%);
+$heading_stat: #CBF7ED;//hsl(0, 0%, 100%);
+$main_para: #8EA8C3;//hsla(0, 0%, 100%, 0.75);
+$stat_heading: #f5cebe;//hsla(0, 0%, 100%, 0.6);
 
 body {
   margin: 0;
@@ -54,6 +54,7 @@ nav {
 
   header {
     font-size: 15px;
+    color: white;
   }
 
   ul {
@@ -109,7 +110,7 @@ section.hero {
     h1 {
       font-weight: 700;
       opacity: 1;
-      color: $secondary;
+      color: white;
       letter-spacing: 2px;
       margin: 10px auto 20px auto;
       font-size: 25px;
@@ -146,7 +147,7 @@ section.about {
   //opacity: 0.95;
   
   h1 {
-    color: $secondary;
+    color: white;
     font-size: 24px;
     margin: 60px 0 0 0;
   }
@@ -155,8 +156,10 @@ section.about {
     width: 70%;
     margin: 40px auto 40px auto;
     text-align: center;
-    font-size: 19px;
+    font-size: 18px;
     color: $main_para;
+    font-weight: 300;
+    letter-spacing: 2px;
     
     span {
       text-decoration: underline;
@@ -169,7 +172,7 @@ section.about {
     h3 {
       text-align: center;
       font-size: 28px;
-      color: $secondary;
+      color: white;
     }
     
     ul {
@@ -184,7 +187,6 @@ section.about {
         font-size: 25px;
         margin: 3px;
         color: white;
-        background: $secondary;
         padding: 10px 20px;
         border-radius: 30px;
       }
@@ -203,7 +205,7 @@ section.projects {
   h1 {
     margin: 40px auto 15px auto;
     font-size: 24px;
-    color: $secondary;
+    color: white;
   }
   
   .project-list {
@@ -261,7 +263,7 @@ section.projects {
           font-size: 12px;
           text-transform: uppercase;
           font-weight: 600;
-          margin: 0 20px 20px 20px;
+          margin: 0 5px 5px 5px;
         }
       }
     }
@@ -274,7 +276,7 @@ section.contact {
   padding: 0 10px 0 10px;
   h1 {
     text-align: center;
-    color: $secondary;
+    color: white;
     font-size: 24px;
     margin: 20px auto 20px auto;
   }
@@ -284,6 +286,7 @@ section.contact {
     align-items: center;
     color: $main_para;
     padding: 0;
+    gap: 20px;
     li {
       font-size: 18px;
       span {
@@ -299,12 +302,14 @@ footer {
   display: flex;
   flex-direction: row;
   align-items: center;
-  justify-content: space-around;
+  justify-content: space-between;
+  padding: 0 20px 0 20px;
   //width: 100%;
   
   .header {
     color: white;
     font-size: 15px;
+    color: $secondary;
   }
 
   ul {
@@ -325,79 +330,4 @@ footer {
   }
 }
 
-@media only screen and (min-width: 780px) {
-
-  .hero-content {
-    h1 {
-      font-size: 25px;
-    }
-
-    p,a {
-      font-size: 20px;
-    }
-  }
-
-  .container {
-    grid-template-areas:
-    "sidebar content"
-    "sidebar about"
-    "sidebar projects"
-    "sidebar contact"
-    "footer footer";
-    grid-template-columns: 120px 1fr;
-    grid-template-rows: repeat(2, 0.7fr) 340px 190px 70px;
-    height: 2.5vh;
-
-    nav {
-      position: relative;
-      top: 0;
-      display: block;
-      text-align: center;
-
-      header {
-        position: relative;
-        margin-bottom: 100px;
-        font-size: 24px;
-      }
-
-      ul {
-        display: flex;
-        align-items: center;
-        flex-direction: column;
-        justify-content: space-between;
-        height: 250px;
-
-        li {
-          font-size: 17px;
-        }
-      }
-    }
-
-    .skills {
-      width: 80%;
-    }
-    
-    footer {
-      justify-content: space-between;
-      align-items: center;
-      
-      .header {
-        font-size: 18px;
-      }
-      
-      ul {
-        justify-content: space-evenly;
-        //width: 60%;
-
-        li {
-          font-size: 16px;
-        }
-      }
-    }
-  }
-
-  .project-card {
-    position: relative;
-    width: 250px;
-  }
-}
+@import './responsive.scss';

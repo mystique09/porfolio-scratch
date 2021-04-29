@@ -289,6 +289,7 @@ section.projects .project-list .project-card .tech-list li {
   color: white;
   padding: 8px;
   font-weight: 500;
+  font-size: 18px;
 }
 
 section.projects .project-list .project-card .links a {

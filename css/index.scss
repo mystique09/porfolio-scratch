@@ -6,11 +6,16 @@ $secondary: #406E8E;//hsl(277, 64%, 61%);
 $heading_stat: #CBF7ED;//hsl(0, 0%, 100%);
 $main_para: #8EA8C3;//hsla(0, 0%, 100%, 0.75);
 $stat_heading: #f5cebe;//hsla(0, 0%, 100%, 0.6);
+$dark: #000000;
 
 body {
   margin: 0;
   padding: 0;
   scroll-behavior: smooth;
+  background-color: #000000;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100%25' height='100%25' viewBox='0 0 1600 800'%3E%3Cg %3E%3Cpolygon fill='%23220000' points='1600 160 0 460 0 350 1600 50'/%3E%3Cpolygon fill='%23440000' points='1600 260 0 560 0 450 1600 150'/%3E%3Cpolygon fill='%23660000' points='1600 360 0 660 0 550 1600 250'/%3E%3Cpolygon fill='%23880000' points='1600 460 0 760 0 650 1600 350'/%3E%3Cpolygon fill='%23A00' points='1600 800 0 800 0 750 1600 450'/%3E%3C/g%3E%3C/svg%3E");
+  background-attachment: fixed;
+  background-size: cover;
 }
 
 * {
@@ -28,18 +33,19 @@ a {
 }
 
 .container {
-  height: 300vh;
+  height: 500vh;
   display: grid;
   grid-template-areas:
   "sidebar"
   "content"
   "about"
+  "skills"
   "projects"
   "contact"
   "footer";
   grid-template-columns: 1fr;
-  grid-template-rows: 40px repeat(3,1fr) 270px 40px;
-  font-size: 32px;
+  grid-template-rows: 50px repeat(4,1fr) 200px;
+  font-size: 2rem;
 }
 
 nav {
@@ -48,12 +54,9 @@ nav {
   flex-direction: row;
   align-items: center;
   justify-content: space-around;
-  width: 100%;
-  background: $primary;
-  color: $heading_stat;
 
   header {
-    font-size: 15px;
+    font-size: 0.9rem;
     color: white;
   }
 
@@ -65,7 +68,7 @@ nav {
     width: 50%;
     li {
       opacity: 0.7;
-      font-size: 12px;
+      font-size: 0.7rem;
       &:hover {
         opacity: 1;
       }
@@ -74,16 +77,10 @@ nav {
 }
 
 section.hero {
-  grid-area:content;
-  display: flex;
-  flex-flow: column;
-  align-items: center;
-  justify-content: space-evenly;
-  background: $primary;
-  //opacity: 0.95;
+  grid-area: content;
   color: $main_para;
   width: 100%;
-  padding-top: 30px;
+  padding-top: 7rem;
 
   .avatar {
     width: 200px;
@@ -100,97 +97,91 @@ section.hero {
   }
 
   .hero-content {
-    padding: 12px;
-    text-align: center;
-    margin: 0 auto;
-    /* display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-*/
+    padding: 16px;
+    //margin: 0 auto;
     h1 {
+      text-align: left;
       font-weight: 700;
       opacity: 1;
       color: white;
       letter-spacing: 2px;
       margin: 10px auto 20px auto;
-      font-size: 25px;
+      font-size: 2rem;
     }
 
     p {
       font-weight: 300;
       letter-spacing: 2px;
-      margin: 10px auto 20px auto;
+      margin: 10px auto 60px auto;
       width: 70%;
-      font-size: 18px;
+      font-size: 1.6rem;
+      text-align: left;
     }
 
     a {
-      background: $secondary;
-      padding: 15px 30px;
-      border-radius: 100px;
-      font-size: 18px;
-      //width: 200px;
+      background: $dark;
+      padding: 0.9rem 2.5rem;
+      border-radius: 2rem;
+      border: none;
+      outline: none;
+      font-size: 1rem;
       color: white;
-      //opacity: 1;
       z-index: 5;
-      margin-bottom: 20px;
     }
   }
 }
 
 section.about {
   grid-area: about;
-  //padding: 16px;
-  background: $primary;
+  //background: $primary;
   color: white;
-  text-align: center;
-  //opacity: 0.95;
+  text-align: left;
+  padding: 16px;
   
   h1 {
     color: white;
-    font-size: 24px;
+    font-size: 2rem;
     margin: 60px 0 0 0;
   }
   
   p {
+    margin: 10px auto 20px auto;
     width: 70%;
-    margin: 40px auto 40px auto;
-    text-align: center;
-    font-size: 18px;
+    font-size: 1.6rem;
     color: $main_para;
     font-weight: 300;
-    letter-spacing: 2px;
     
     span {
       text-decoration: underline;
       color: $secondary;
     }
   }
-  
-  .skills {
-    margin: 80px auto 50px auto;
-    h3 {
-      text-align: center;
-      font-size: 28px;
-      color: white;
-    }
+}
+
+section.skills {
+  grid-area: skills;
+  //background: $primary;
+  padding: 16px;
+  text-align: left;
+  h3 {
+    font-size: 2rem;
+    color: white;
+  }
     
-    ul {
-      display: flex;
-      flex-direction: row;
-      flex-wrap: wrap;
-      justify-content: space-evenly;
-      width: 80%;
-      margin: 10px auto 10px 0;
-      background: $primary;
+  ul {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    width: 80%;
+    margin: 70px auto 10px 0;
+    //background: $primary;
       li {
-        font-size: 25px;
+        font-size: 4rem;
         margin: 3px;
-        color: white;
+        color: $dark;
         padding: 10px 20px;
         border-radius: 30px;
-      }
     }
   }
 }
@@ -198,15 +189,12 @@ section.about {
 section.projects {
   grid-area: projects;
   width: 100%;
-  text-align: center;
-  background: $primary;
-  //opacity: 0.95;
- // color: $heading_stat;
   
   h1 {
-    margin: 40px auto 15px auto;
-    font-size: 24px;
+    font-size: 2rem;
     color: white;
+    text-align: left;
+    padding-left: 16px;
   }
   
   .project-list {
@@ -218,14 +206,16 @@ section.projects {
     
     .project-card {
       text-align: center;
-     // width: 90%;
+      width: 20rem;
+      max-width: 28rem;
       height: 210px;
-      background: $card_bg;
+      background: $dark;
       border-radius: 8px;
       margin: 20px auto 20px auto;
       
       h1 {
-        font-size: 18px;
+        font-size: 1.3rem;
+        text-align: center;
       }
       
       p {
@@ -240,12 +230,8 @@ section.projects {
         list-style: none;
         font-size: 12px;
         display: flex;
-        //flex-direction: row;
         color: $heading_stat;
         width: 50%;
-        //flex-wrap: wrap;
-        //justify-content: center;
-        //align-items: center;
         margin: 2px auto 0 auto;
         text-align: center;
         li {
@@ -273,13 +259,11 @@ section.projects {
 
 section.contact {
   grid-area: contact;
-  background: $primary;
-  padding: 0 10px 0 10px;
+  padding: 16px;
   h1 {
-    text-align: center;
+    text-align: left;
     color: white;
-    font-size: 24px;
-    margin: 20px auto 20px auto;
+    font-size: 2rem;
   }
   ul {
     display: flex;
@@ -287,19 +271,16 @@ section.contact {
     align-items: center;
     color: $main_para;
     padding: 0;
-    gap: 20px;
     li {
-      font-size: 18px;
-      span {
-        color: $secondary;
-      }
+      color: $dark;
+      font-size: 1.3rem;
     }
   }
 }
 
 footer {
   grid-area: footer;
-  background: $primary;
+  //background: $primary;
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -309,8 +290,8 @@ footer {
   
   .header {
     color: white;
-    font-size: 15px;
-    color: $secondary;
+    font-size: 1rem;
+    color: white;
   }
 
   ul {
@@ -320,12 +301,15 @@ footer {
     justify-content: space-between;
 
     li {
-      font-size: 12px;
+      font-size: 0.6rem;
       margin: 10px;
-      opacity: 0.6;
-
       &:hover {
         opacity: 1;
+      }
+      a {
+        i {
+          color: $dark;
+        }
       }
     }
   }

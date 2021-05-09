@@ -6,23 +6,23 @@
     font-size: 20px;
   }
   .container {
-        grid-template-areas: "sidebar content" "sidebar about" "sidebar projects" "sidebar contact" "footer footer";
+        grid-template-areas: "sidebar content" "sidebar about" "sidebar skills" "sidebar projects" "sidebar contact" "footer footer";
     -ms-grid-columns: 120px 1fr;
         grid-template-columns: 120px 1fr;
-    -ms-grid-rows: (2.7fr)[2] 340px 250px 50px;
-        grid-template-rows: repeat(2, 2.7fr) 340px 250px 50px;
-    height: 2.7vh;
+    -ms-grid-rows: (1fr)[3] 450px 240px 120px;
+        grid-template-rows: repeat(3, 1fr) 450px 240px 120px;
+    height: 400vh;
   }
   .container nav {
     position: relative;
     display: block;
     text-align: center;
-    padding-top: 40px;
+    padding-top: 4rem;
   }
   .container nav header {
     position: relative;
-    margin-bottom: 10px;
-    font-size: 24px;
+    font-size: 1.5rem;
+    margin-bottom: 7rem;
   }
   .container nav ul {
     display: -webkit-box;
@@ -43,8 +43,13 @@
   .container nav ul li {
     font-size: 17px;
   }
-  .container .skills {
-    width: 80%;
+  .container section.hero .hero-content a {
+    margin-left: 15rem;
+  }
+  .container section.skills {
+    -ms-grid-row: 3;
+    -ms-grid-column: 2;
+    grid-area: skills;
   }
   .container footer {
     -webkit-box-pack: justify;

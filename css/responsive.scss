@@ -15,23 +15,24 @@
       grid-template-areas:
       "sidebar content"
       "sidebar about"
+      "sidebar skills"
       "sidebar projects"
       "sidebar contact"
       "footer footer";
       grid-template-columns: 120px 1fr;
-      grid-template-rows: repeat(2, 2.7fr) 340px 250px 50px;
-      height: 2.7vh;
+      grid-template-rows: repeat(3, 1fr) 450px 240px 120px;
+      height: 400vh;
   
       nav {
         position: relative;
         display: block;
         text-align: center;
-        padding-top: 40px;
+        padding-top: 4rem;
   
         header {
           position: relative;
-          margin-bottom: 10px;
-          font-size: 24px;
+          font-size: 1.5rem;
+          margin-bottom: 7rem;
         }
   
         ul {
@@ -46,11 +47,19 @@
           }
         }
       }
-  
-      .skills {
-        width: 80%;
+
+      section.hero {
+        .hero-content {
+          a {
+            margin-left: 15rem;
+          }
+        }
       }
-      
+
+      section.skills {
+        grid-area: skills;
+      }
+
       footer {
         justify-content: space-between;
         align-items: center;

@@ -11,11 +11,26 @@
   <script src="https://kit.fontawesome.com/8fa8ba0057.js" crossorigin="anonymous"></script>
 </head>
 <body>
+  <div id="hidden-nav-pages" class="hidden-nav-pages">
+    <div class="close">&times;</div>
+    <ul>
+      <li><a class="hidden-nav-links" href="#about">About</a></li>
+      <li><a class="hidden-nav-links" href="#projects">Projects</a></li>
+      <li><a class="hidden-nav-links" href="#contact">Contact</a></li>
+    </ul>
+  </div>
   <div class="container">
     <nav class="navbar">
       <header class="logo">
         <s>BEN</s>
       </header>
+      <div id="burger-menu" class="burger-menu">
+        <div class="burger-icons">
+          <div class="middle">
+            a
+          </div>
+        </div>
+      </div>
       <ul class="pages">
         <li><a href="#about">About</a></li>
         <li><a href="#projects">Projects</a></li>
@@ -24,16 +39,15 @@
     </nav>
     <section class="hero">
       <!-- <div class="avatar">
-        <img src="./images/avatar.jpeg" alt="Avatar" />
-        
-      </div>
-      -->
+              <img src="./images/avatar.jpeg" alt="Avatar" />
+            </div>
+            -->
       <div class="hero-content">
         <h1>Passionate<br>UI/UX Developer!</h1>
         <p>
           Hello, I am a Web Developer based in Philippines. I am passionate in making and designing a Web page.
         </p>
-      <a href="#about">Browse</a>
+        <a href="#about">Browse</a>
       </div>
     </section>
     <section id="about" class="about">
@@ -43,23 +57,25 @@
       </p>
     </section>
     <section class="skills">
-        <h3>My Skills</h3>
-        <ul>
-          <li><i class="fab fa-css3"></i></li>
-          <li><i class="fab fa-js"></i></li>
-          <li><i class="fab fa-python"></i></li>
-          <li><i class="fab fa-html5"></i></li>
-          <li><i class="fab fa-react"></i></li>
-          <li><i class="fab fa-vuejs"></i></li>
-          <li><i class="fab fa-node"></i></li>
-        </ul>
+      <h3>My Skills</h3>
+      <ul>
+        <li><i class="fab fa-css3"></i></li>
+        <li><i class="fab fa-js"></i></li>
+        <li><i class="fab fa-python"></i></li>
+        <li><i class="fab fa-html5"></i></li>
+        <li><i class="fab fa-react"></i></li>
+        <li><i class="fab fa-vuejs"></i></li>
+        <li><i class="fab fa-node"></i></li>
+      </ul>
     </section>
     <section id="projects" class="projects">
       <h1>My Projects</h1>
       <div class="project-list">
         <div class="project-card">
           <h1>Portfolio</h1>
-          <p>My first portfolio made from scratch. Mobile responsive.</p>
+          <p>
+            My first portfolio made from scratch. Mobile responsive.
+          </p>
           <ul class="tech-list">
             <li><i class="fab fa-css3"></i></li>
             <li><i class="fab fa-html5"></i></li>
@@ -73,7 +89,9 @@
         </div>
         <div class="project-card">
           <h1>Portfolio</h1>
-          <p>Portfolio made with ReactJS. Not mobile resoonsive.</p>
+          <p>
+            Portfolio made with ReactJS. Not mobile resoonsive.
+          </p>
           <ul class="tech-list">
             <li><i class="fab fa-css3"></i></li>
             <li><i class="fab fa-react"></i></li>
@@ -81,7 +99,7 @@
           </ul>
           <div class="links">
             <a href="https://github.com/mystique09/mernproject"><i class="fas fa-code"></i> Source Code</a>
-           <!-- <a href="#">Live demo</a> -->
+            <!-- <a href="#">Live demo</a> -->
           </div>
         </div>
       </div>
@@ -105,5 +123,6 @@
       </ul>
     </footer>
   </div>
+  <script src="./script/index.js" type="text/javascript" charset="utf-8"></script>
 </body>
 </html>

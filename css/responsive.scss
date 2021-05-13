@@ -1,93 +1,83 @@
-
 @media only screen and (min-width: 720px) {
+  .hero-content h1 {
+    font-size: 25px;
+  }
+  .hero-content p, .hero-content a {
+    font-size: 20px;
+  }
 
-    .hero-content {
-      h1 {
-        font-size: 25px;
-      }
-  
-      p,a {
-        font-size: 20px;
-      }
-    }
-  
-    .container {
-      grid-template-areas:
-      "sidebar content"
-      "sidebar about"
-      "sidebar skills"
-      "sidebar projects"
-      "sidebar contact"
-      "footer footer";
-      grid-template-columns: 120px 1fr;
-      grid-template-rows: repeat(3, 1fr) 450px 240px 120px;
-      height: 400vh;
-  
-      nav {
-        position: relative;
-        display: block;
-        text-align: center;
-        padding-top: 4rem;
-  
-        header {
-          position: relative;
-          font-size: 1.5rem;
-          margin-bottom: 7rem;
-        }
-  
-        ul {
-          display: flex;
-          align-items: center;
-          flex-direction: column;
-          justify-content: space-between;
-          height: 250px;
-  
-          li {
-            font-size: 17px;
-          }
-        }
-      }
-
-      section.hero {
-        .hero-content {
-          a {
-            margin-left: 15rem;
-          }
-        }
-      }
-
-      section.skills {
-        grid-area: skills;
-      }
-
-      footer {
-        justify-content: space-between;
-        align-items: center;
-        padding: 0 20px 0 20px;
-        
-        .header {
-          font-size: 18px;
-        }
-        
-        ul {
-          justify-content: space-evenly;
-          //width: 60%;
-  
-          li {
-            font-size: 16px;
-          }
+  .container {
+    grid-template-areas: 
+    "sidebar content" 
+    "sidebar about" 
+    "sidebar skills" 
+    "sidebar projects" 
+    "sidebar contact" 
+    "footer footer";
+    grid-template-columns: 120px 1fr;
+    grid-template-rows: repeat(3, 1fr) 450px 240px 120px;
+    height: 400vh;
+    
+    section.hero {
+      .hero-content {
+        a {
+          margin-left: 15rem;
         }
       }
     }
-  
-    .project-card {
-      position: relative;
-      width: 250px;
+    section.skills {
+      grid-area: skills;
     }
-
-    .contact {
+    footer {
+      justify-content: space-between;
+      align-items: center;
+      padding: 0 20px 0 20px;
+      .header {
+        font-size: 18px;
+      }
       ul {
-        gap: 20px;
+        justify-content: space-evenly;
+        li {
+          font-size: 16px;
+        }
       }
     }
   }
+  nav {
+    position: relative;
+    display: block;
+    text-align: center;
+    padding-top: 4rem;
+    header {
+      position: relative;
+      font-size: 1.5rem;
+      margin-bottom: 7rem;
+    }
+    
+    .burger-menu {
+      display: none;
+    }
+    
+    ul {
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+      justify-content: space-between;
+      height: 250px;
+      li {
+        font-size: 17px;
+      }
+    }
+  }
+
+  .project-card {
+    position: relative;
+    width: 250px;
+  }
+
+  .contact ul {
+    gap:20px;
+  }
+}
+
+/*# sourceMappingURL=responsive.scss.map */

@@ -2,81 +2,72 @@
   .hero-content h1 {
     font-size: 25px;
   }
+
   .hero-content p, .hero-content a {
     font-size: 20px;
   }
+
   .container {
-        grid-template-areas: "sidebar content" "sidebar about" "sidebar skills" "sidebar projects" "sidebar contact" "footer footer";
-    -ms-grid-columns: 120px 1fr;
-        grid-template-columns: 120px 1fr;
-    -ms-grid-rows: (1fr)[3] 450px 240px 120px;
-        grid-template-rows: repeat(3, 1fr) 450px 240px 120px;
+    grid-template-areas: "sidebar content" "sidebar about" "sidebar skills" "sidebar projects" "sidebar contact" "footer footer";
+    grid-template-columns: 120px 1fr;
+    grid-template-rows: repeat(3, 1fr) 450px 240px 120px;
     height: 400vh;
-  }
-  .container nav {
-    position: relative;
-    display: block;
-    text-align: center;
-    padding-top: 4rem;
-  }
-  .container nav header {
-    position: relative;
-    font-size: 1.5rem;
-    margin-bottom: 7rem;
-  }
-  .container nav ul {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
-    height: 250px;
-  }
-  .container nav ul li {
-    font-size: 17px;
   }
   .container section.hero .hero-content a {
     margin-left: 15rem;
   }
   .container section.skills {
-    -ms-grid-row: 3;
-    -ms-grid-column: 2;
     grid-area: skills;
   }
   .container footer {
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
+    justify-content: space-between;
+    align-items: center;
     padding: 0 20px 0 20px;
   }
   .container footer .header {
     font-size: 18px;
   }
   .container footer ul {
-    -webkit-box-pack: space-evenly;
-        -ms-flex-pack: space-evenly;
-            justify-content: space-evenly;
+    justify-content: space-evenly;
   }
   .container footer ul li {
     font-size: 16px;
   }
+
+  nav {
+    position: relative;
+    display: block;
+    text-align: center;
+    padding-top: 4rem;
+  }
+  nav header {
+    position: relative;
+    font-size: 1.5rem;
+    margin-bottom: 7rem;
+  }
+  nav .burger-menu {
+    display: none;
+  }
+  nav ul {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 250px;
+  }
+  nav ul li {
+    font-size: 17px;
+  }
+
   .project-card {
     position: relative;
     width: 250px;
   }
+
   .contact ul {
     gap: 20px;
   }
 }
+/*# sourceMappingURL=responsive.scss.map */
+
 /*# sourceMappingURL=responsive.css.map */

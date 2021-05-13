@@ -1,32 +1,25 @@
-/*function translate(sentence) {
-  const rev = sentence.split(' ');
-  const capAlphabet = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'.split('');
 
-  if (rev.length >= 2) {
-    return rev.map((word, index)=> {
-      word = word.split('');
-      let isCapital = capAlphabet.includes(word[0]);
-      word.push(word.shift());
-      word[0] = isCapital & word[0] .toLocaleUpperCase();
-      word[word.length-1] = word[word.length - 1].toLocaleLowerCase();
-      return word.join('') + 'ay';
-    }).join(' ');
-  } else {
-    let word = rev[0].split(''),
-    isCapital = capAlphabet.includes(word[0]);
-    word.push(word.shift());
-    word[0] = isCapital & word[0].toLocaleUpperCase();
-    return word.join('') + 'ay';
-  }
-}
+// NAVBAR
 
-console.log(translate('Hello World'))
-*/
+const showBtn = document.getElementById('burger-menu');
+const hiddenNavMobile = document.getElementById('hidden-nav-pages');
+const closeBtn = document.querySelector('.close');
+const hiddenNavLinks = document.querySelectorAll('.hidden-nav-pages > ul > li > .hidden-nav-links');
 
-let numbers = []
+hiddenNavMobile.classList.add('hidden');
 
-for(let i = 1; i <= 100; i++){
-  numbers.push(i);
-}
+hiddenNavLinks.forEach((navLink)=>{
+  navLink.addEventListener('click', function(){
+    hiddenNavMobile.classList.add('hidden');
+  });
+});
 
-numbers.pop();
+showBtn.addEventListener('click', function(){
+  hiddenNavMobile.classList.remove('hidden');
+});
+
+closeBtn.addEventListener('click', function(){
+  hiddenNavMobile.classList.add('hidden');
+});
+
+// END NAVBAR

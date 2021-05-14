@@ -44,7 +44,7 @@ a {
   "contact"
   "footer";
   grid-template-columns: 1fr;
-  grid-template-rows: 50px repeat(4,1fr) 200px;
+  grid-template-rows: 50px repeat(5, 1fr) 50px;
   font-size: 2rem;
 }
 
@@ -60,25 +60,26 @@ nav {
     font-size: 0.9rem;
     color: white;
   }
-  
+
   .burger-menu {
     width: 30px;
     height: 40px;
     background: none;
-    
+
     .burger-icons {
       display: block;
       position: relative;
       width: 100%;
-      
+
       .middle {
         //visibility: hidden;
         width: 100%;
-        background: none;
+        background: transparent;
         height: 80%;
+        color: transparent;
       }
-      
-      &:after, 
+
+      &:after,
       &:before {
         content: "";
         position: absolute;
@@ -86,14 +87,14 @@ nav {
         height: 2px;
         background: white;
       }
-      
+
       &:before {
         top: 0;
         right: 0;
         width: 50%;
         margin-top: 10px;
       }
-      
+
       &:after {
         top: 70%;
         right: 0;
@@ -120,10 +121,10 @@ nav {
 }
 
 section.hero {
-  grid-area: content;
+  grid-area:content;
   color: $main_para;
   width: 100%;
-  padding-top: 7rem;
+  padding-top: 10px;
 
   .avatar {
     width: 200px;
@@ -148,7 +149,7 @@ section.hero {
       opacity: 1;
       color: white;
       letter-spacing: 2px;
-      margin: 10px auto 20px auto;
+      margin: 0 auto 20px auto;
       font-size: 2rem;
     }
 
@@ -176,24 +177,24 @@ section.hero {
 
 section.about {
   grid-area: about;
-  //background: $primary;
   color: white;
   text-align: left;
   padding: 16px;
-  
+
   h1 {
     color: white;
     font-size: 2rem;
-    margin: 60px 0 0 0;
+    margin: 0;
   }
-  
+
   p {
-    margin: 10px auto 20px auto;
+    margin: 0 auto 0 auto;
+    padding-top: 30px;
     width: 70%;
     font-size: 1.6rem;
     color: $main_para;
     font-weight: 300;
-    
+
     span {
       text-decoration: underline;
       color: $secondary;
@@ -205,26 +206,27 @@ section.skills {
   grid-area: skills;
   //background: $primary;
   padding: 16px;
+  padding-top: 0;
   text-align: left;
   h3 {
     font-size: 2rem;
     color: white;
   }
-    
+
   ul {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-evenly;
     width: 80%;
-    margin: 70px auto 10px 0;
+    margin: 0 auto 10px 0;
     //background: $primary;
-      li {
-        font-size: 4rem;
-        margin: 3px;
-        color: $dark;
-        padding: 10px 20px;
-        border-radius: 30px;
+    li {
+      font-size: 4rem;
+      margin: 3px;
+      color: $dark;
+      padding: 10px 20px;
+      border-radius: 30px;
     }
   }
 }
@@ -232,21 +234,21 @@ section.skills {
 section.projects {
   grid-area: projects;
   width: 100%;
-  
+
   h1 {
     font-size: 2rem;
     color: white;
     text-align: left;
     padding-left: 16px;
   }
-  
+
   .project-list {
     display: flex;
     flex-wrap: wrap;
     align-items: center;
     justify-content: space-evenly;
     //gap: 1px;
-    
+
     .project-card {
       text-align: center;
       width: 20rem;
@@ -255,12 +257,12 @@ section.projects {
       background: $dark;
       border-radius: 8px;
       margin: 20px auto 20px auto;
-      
+
       h1 {
         font-size: 1.3rem;
         text-align: center;
       }
-      
+
       p {
         font-size: 14px;
         color: $main_para;
@@ -268,7 +270,7 @@ section.projects {
         margin: 0 auto 5px auto;
         font-weight: 500;
       }
-      
+
       .tech-list {
         list-style: none;
         font-size: 12px;
@@ -286,7 +288,7 @@ section.projects {
           font-size: 18px;
         }
       }
-      
+
       .links {
         //margin-top: -10px;
         a {
@@ -302,11 +304,14 @@ section.projects {
 
 section.contact {
   grid-area: contact;
-  padding: 16px;
+  //padding: 16px;
+  position: relative;
+
   h1 {
     text-align: left;
     color: white;
     font-size: 2rem;
+    padding-left: 16px;
   }
   ul {
     display: flex;
@@ -314,15 +319,82 @@ section.contact {
     align-items: center;
     color: $main_para;
     padding: 0;
-    li {
-      color: $dark;
-      font-size: 1.3rem;
-    }
+  }
+  li {
+    color: $dark;
+    font-size: 1.3rem;
+  }
+
+  .contact-form {
+    background: $dark;
+    color: white;
+    padding: 15px;
+    font-size: 1.2rem;
+    width: 90%;
+    margin: 0 auto;
+  }
+  
+  .details {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin-bottom: 10px;
+    align-items: flex-start;
+    justify-content: space-between;
+  }
+  
+  .group-inputs {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 100%;
+    margin: 0;
+  }
+  
+  label {
+    font-size: 1.2rem;
+    margin-top: 5px;
+  }
+  
+  input[type="text"], input[type="email"] {
+    color: white;
+    background: $primary;
+    border: none;
+    outline: none;
+    height: 30px;
+    padding: 5px;
+    font-size: 1rem;
+    max-width: 1110px;
+    width: 100%;
+  }
+  
+  .group-inputs.comment {
+    width: 100%;
+  }
+  
+  #comment {
+    background: $primary;
+    outline: none;
+    border: none;
+    color: white;
+    font-size: 0.8rem;
+    max-width: 1110px;
+    width: 100%;
+    height: 100px;
+  }
+  
+  #submit {
+    padding: 1rem 2rem;
+    background: darkred;
+    color: white;
+    outline: none;
+    border: none;
+    align-self: flex-end;
   }
 }
 
 footer {
-  grid-area: footer;
+  grid-area:footer;
   //background: $primary;
   display: flex;
   flex-direction: row;
@@ -330,11 +402,12 @@ footer {
   justify-content: space-between;
   padding: 0 20px 0 20px;
   //width: 100%;
-  
+
   .header {
     color: white;
     font-size: 1rem;
     color: white;
+    position: relative;
   }
 
   ul {
@@ -365,7 +438,7 @@ footer {
   height: 100vh;
   background: $dark;
   //display: none;
-  
+
   .close {
     font-size: 3rem;
     color: white;
@@ -373,18 +446,18 @@ footer {
     text-align: right;
     z-index: 83847474;
   }
-  
+
   ul {
     width: 80%;
     height: 70%;
     padding: 0;
     text-align: center;
     margin: 0 auto 0 auto;
-    
+
     display: flex;
     flex-direction: column;
     justify-content: space-around;
-    
+
     li, a {
       font-size: 1.5rem;
       color: white;
@@ -392,12 +465,10 @@ footer {
   }
 }
 
-.hidden  {
+.hidden {
   display: none;
 }
 
-@media only screen and (min-width: 720px){
-  
-}
+@media only screen and (min-width: 720px) {}
 
 @import './responsive.scss';

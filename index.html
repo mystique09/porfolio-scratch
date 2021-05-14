@@ -12,7 +12,9 @@
 </head>
 <body>
   <div id="hidden-nav-pages" class="hidden-nav-pages">
-    <div class="close">&times;</div>
+    <div class="close">
+      &times;
+    </div>
     <ul>
       <li><a class="hidden-nav-links" href="#about">About</a></li>
       <li><a class="hidden-nav-links" href="#projects">Projects</a></li>
@@ -39,9 +41,9 @@
     </nav>
     <section class="hero">
       <!-- <div class="avatar">
-              <img src="./images/avatar.jpeg" alt="Avatar" />
-            </div>
-            -->
+                                                              <img src="./images/avatar.jpeg" alt="Avatar" />
+                                                            </div>
+                                                            -->
       <div class="hero-content">
         <h1>Passionate<br>UI/UX Developer!</h1>
         <p>
@@ -106,11 +108,36 @@
     </section>
     <section id="contact" class="contact">
       <h1>Contact Me</h1>
-      <ul>
-        <li><i class="fab fa-facebook" style="font-size:20px;"></i> benjiebengarcia</li>
-        <li><i class="fab fa-linkedin" style="font-size:20px;"></i> benjiebengarcia</li>
-        <li><i class="fab fa-github" style="font-size:20px;"></i> mystique09</li>
-      </ul>
+      <!--
+                                                <ul>
+                                                  <li><i class="fab fa-facebook" style="font-size:20px;"></i> benjiebengarcia</li>
+                                                  <li><i class="fab fa-linkedin" style="font-size:20px;"></i> benjiebengarcia</li>
+                                                  <li><i class="fab fa-github" style="font-size:20px;"></i> mystique09</li>
+                                                </ul>
+                                                -->
+      <form class="contact-form">
+        <div class="details">
+          <div class="group-inputs">
+            <label for="name">Name</label>
+            <input type="text" name="name" id="name" required="true" value="" />
+          </div>
+          <div class="group-inputs">
+            <label for="lastName">Last Name</label>
+            <input type="text" name="lastName" id="lastName" required="true" value="" />
+          </div>
+          <div class="group-inputs">
+            <label for="email">Email</label>
+            <input type="email" name="email" id="email" required="true" value="" />
+          </div>
+          <div class="group-inputs comment">
+            <label>Comment</label>
+            <textarea id="comment" rows="6" cols="40"></textarea>
+          </div>
+        </div>
+        <div class="group-inputs">
+          <input type="submit" name="submit" id="submit" value="Submit" />
+        </div>
+      </form>
     </section>
     <footer id="footer" class="footer">
       <h1 class="header">

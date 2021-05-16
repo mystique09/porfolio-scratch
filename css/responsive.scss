@@ -7,31 +7,125 @@
   }
 
   .container {
-    grid-template-areas: 
-    "sidebar content" 
-    "sidebar about" 
-    "sidebar skills" 
-    "sidebar projects" 
-    "sidebar contact" 
-    "footer footer";
-    grid-template-columns: 120px 1fr;
-    grid-template-rows: repeat(3, 1fr) 450px 240px 120px;
-    height: 400vh;
-    
-    section.hero {
-      .hero-content {
-        a {
-          margin-left: 15rem;
+    grid-template-areas:
+    "sidebar"
+    "content" 
+    "about" 
+    "skills" 
+    "projects" 
+    "contact" 
+    "footer";
+    grid-template-columns: 1fr;
+    grid-template-rows: 120px repeat(3, 1fr) 1fr 1fr 120px;
+    height: 430vh;
+
+    nav {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-between;
+      margin: 0 auto;
+      width: 100%;
+      max-width: 1000px;
+
+      header {
+        position: relative;
+        font-size: 1.2rem;
+      }
+      
+      .burger-menu {
+        display: none;
+      }
+      
+      ul {
+        display: flex;
+        align-items: center;
+        flex-direction: row;
+        justify-content: space-around;
+      
+        li {
+          font-size: 17px;
         }
       }
     }
+    
+    section.hero {
+      padding: 0;
+      .hero-content {
+        margin: 2rem;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: space-around;
+        flex-direction: column;
+      }
+      h1 {
+        margin-top: 4rem;
+        font-size: 5rem;
+      }
+
+      p {
+        width: 50%;
+      }
+    }
+
+    section.about {
+      text-align: center;
+      h1 {
+        margin-top: 2rem;
+        font-size: 5rem;
+      }
+      p {
+        margin-top: 5rem;
+        width: 50%;
+      }
+    }
+
     section.skills {
       grid-area: skills;
+      text-align: center;
+
+      h1 {
+        font-size: 5rem;
+        color: white;
+      }
+
+      ul {
+        width: 50%;
+        margin: 0 auto;
+      }
+
     }
+
+    section.projects {
+      h1 {
+        font-size: 5rem;
+        text-align: center;
+      }
+
+      .project-list {
+        display: flex;
+        justify-content: flex-start;
+        width: 80%;
+        margin: 0 auto;
+      }
+    }
+
+    section.contact {
+      h1 {
+        font-size: 5rem;
+        text-align: center;
+      }
+    }
+
     footer {
       justify-content: space-between;
       align-items: center;
       padding: 0 20px 0 20px;
+      width: 100%;
+      max-width: 1000px;
+      margin: 0 auto;
+
       .header {
         font-size: 18px;
       }
@@ -40,32 +134,6 @@
         li {
           font-size: 16px;
         }
-      }
-    }
-  }
-  nav {
-    position: relative;
-    display: block;
-    text-align: center;
-    padding-top: 4rem;
-    header {
-      position: relative;
-      font-size: 1.5rem;
-      margin-bottom: 7rem;
-    }
-    
-    .burger-menu {
-      display: none;
-    }
-    
-    ul {
-      display: flex;
-      align-items: center;
-      flex-direction: column;
-      justify-content: space-between;
-      height: 250px;
-      li {
-        font-size: 17px;
       }
     }
   }

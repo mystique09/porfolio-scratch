@@ -29,23 +29,25 @@ ul {
 
 a {
   text-decoration: none;
-  color: $heading_stat;
+  color: white;
 }
 
 .container {
-  height: 550vh;
+  position: relative;
+  margin: 0 auto;
   display: grid;
   grid-template-areas:
   "sidebar"
-  "content"
+  "home"
   "about"
   "skills"
   "projects"
   "contact"
   "footer";
   grid-template-columns: 1fr;
-  grid-template-rows: 50px repeat(4, 1fr) 670px 50px;
+  grid-template-rows: 50px repeat(2,minmax(20rem,40rem)) 40rem 100rem 1fr 50px;
   font-size: 2rem;
+  grid-gap: 5rem;
 }
 
 nav {
@@ -55,6 +57,8 @@ nav {
   align-items: center;
   justify-content: space-between;
   padding: 20px;
+  height: 30px;
+  margin-bottom: 4rem;
 
   header {
     font-size: 0.9rem;
@@ -111,93 +115,77 @@ nav {
     justify-content: space-around;
     width: 50%;
     li {
-      opacity: 0.7;
       font-size: 0.7rem;
-      &:hover {
-        opacity: 1;
-      }
     }
   }
 }
 
-section.hero {
-  grid-area:content;
-  color: $main_para;
-  width: 100%;
-  padding-top: 10px;
+.hero {
+  //position: relative;
+  grid-area: home;
+  //height: 100vh;
+  padding: 1.5rem;
+  margin: 0 auto;
 
-  .avatar {
-    width: 200px;
-    height: 200px;
-    border-radius: 100px;
-    overflow: hidden;
-    margin: 10px 0 10px 0;
-
-    img {
-      position: relative;
-      width: 100%;
-      height: 100%;
-    }
+  h1 {
+    font-weight: 700;
+    color: white;
+    letter-spacing: 0.2rem;
+    margin-top: 0;
+    font-size: 2rem;
   }
 
-  .hero-content {
-    padding: 16px;
-    //margin: 0 auto;
-    h1 {
-      text-align: left;
-      font-weight: 700;
-      opacity: 1;
-      color: white;
-      letter-spacing: 2px;
-      margin: 100px auto 20px auto;
-      font-size: 2rem;
-    }
+  span {
+    font-size: 1.5rem;
+    color: $secondary;
+    font-weight: 700;
+  }
 
-    span {
-      font-size: 1.5rem;
-    }
+  p {
+    font-weight: 500;
+    letter-spacing: 0.2rem;
+    line-height: 1.5rem;
+    font-size: 1.2rem;
+    text-align: left;
+    color: #d2d2d2;
+    margin-top: -1rem;
+  }
 
-    p {
-      font-weight: 300;
-      letter-spacing: 2px;
-      margin: 10px auto 60px auto;
-      width: 70%;
-      font-size: 1.6rem;
-      text-align: left;
-    }
-
+  .div {
+    margin-top: 6rem;
+    text-align: center;
     a {
       background: $dark;
-      padding: 0.9rem 2.5rem;
       border-radius: 2rem;
+      padding: 1.1rem 2.5rem;
       border: none;
       outline: none;
-      font-size: 1rem;
-      color: white;
+      font-size: 0.7rem;
+      color: #d2d2d2;
       z-index: 5;
     }
   }
 }
 
-section.about {
+.about {
   grid-area: about;
+  //position: relative;
   color: white;
-  text-align: left;
   padding: 16px;
+  //height: 100vh;
 
   h1 {
     color: white;
     font-size: 2rem;
-    margin: 0;
+    text-align: left;
   }
 
   p {
-    margin: 0 auto 0 auto;
-    padding-top: 30px;
-    width: 70%;
-    font-size: 1.6rem;
-    color: $main_para;
-    font-weight: 300;
+    font-weight: 500;
+    letter-spacing: 0.2rem;
+    line-height: 1.5rem;
+    font-size: 1.2rem;
+    color: #d2d2d2;
 
     span {
       text-decoration: underline;
@@ -206,12 +194,12 @@ section.about {
   }
 }
 
-section.skills {
+.skills {
   grid-area: skills;
-  //background: $primary;
   padding: 16px;
   padding-top: 0;
   text-align: left;
+
   h1 {
     font-size: 2rem;
     color: white;
@@ -223,19 +211,17 @@ section.skills {
     flex-wrap: wrap;
     justify-content: space-evenly;
     width: 80%;
-    margin: 0 auto 10px 0;
-    //background: $primary;
+    
     li {
       font-size: 4rem;
       margin: 3px;
-      color: $dark;
-      padding: 10px 20px;
-      border-radius: 30px;
+      color: #d2d2d2;
+      padding: 10px;
     }
   }
 }
 
-section.projects {
+.projects {
   grid-area: projects;
   width: 100%;
 
@@ -257,7 +243,7 @@ section.projects {
       text-align: center;
       width: 20rem;
       max-width: 28rem;
-      background: $dark;
+      background: $primary;
       height: 20rem;
       border-radius: 8px;
       margin: 20px auto 20px auto;
@@ -271,7 +257,7 @@ section.projects {
 
       p {
         font-size: 14px;
-        color: $main_para;
+        color: #d2d2d2;
         width: 80%;
         margin: 0 auto 5px auto;
         font-weight: 500;
@@ -308,10 +294,8 @@ section.projects {
   }
 }
 
-section.contact {
+.contact {
   grid-area: contact;
-  //padding: 16px;
-  position: relative;
 
   h1 {
     text-align: left;
@@ -340,7 +324,7 @@ section.contact {
     margin: 0 auto;
     max-width: 650px;
   }
-  
+
   .details {
     display: flex;
     flex-direction: row;
@@ -349,7 +333,7 @@ section.contact {
     align-items: flex-start;
     justify-content: space-between;
   }
-  
+
   .group-inputs {
     display: flex;
     flex-direction: column;
@@ -357,12 +341,12 @@ section.contact {
     width: 100%;
     margin: 0;
   }
-  
+
   label {
     font-size: 1.2rem;
     margin-top: 0.4rem;
   }
-  
+
   input[type="text"], input[type="email"] {
     color: white;
     background: $primary;
@@ -374,11 +358,11 @@ section.contact {
     max-width: 1110px;
     width: 100%;
   }
-  
+
   .group-inputs.comment {
     width: 100%;
   }
-  
+
   #comment {
     background: $primary;
     outline: none;
@@ -389,7 +373,7 @@ section.contact {
     width: 100%;
     height: 100px;
   }
-  
+
   #submit {
     padding: 1rem 2rem;
     background: darkred;
@@ -408,6 +392,7 @@ footer {
   align-items: center;
   justify-content: space-between;
   padding: 0 20px 0 20px;
+  height: 50px;
   //width: 100%;
 
   .header {
@@ -476,6 +461,43 @@ footer {
   display: none;
 }
 
-@media only screen and (min-width: 720px) {}
+// DESKTOP RESPONSIVE Layout
+@media only screen and (min-width: 720px) {
+  .container {
+    position: relative;
+    margin: 0 auto;
+    display: grid;
+    grid-template-areas:
+    "sidebar"
+    "home"
+    "about"
+    "skills"
+    "projects"
+    "contact"
+    "footer";
+    grid-template-columns: 1fr;
+    grid-template-rows: 50px repeat(2,minmax(20rem,40rem)) 40rem minmax(40rem,50rem) 1fr 50px;
+    font-size: 2rem;
+    grid-gap: 5rem;
+  }
 
-@import './responsive.scss';
+  .navbar {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    padding: 20px;
+    
+    .pages {
+      display: flex;
+    }
+    
+    .burger-menu {
+      display: none;
+    }
+  }
+
+  .hidden-nav-pages{
+    display: none;
+  }
+}

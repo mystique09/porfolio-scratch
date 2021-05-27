@@ -10,7 +10,7 @@ body {
 }
 
 * {
-  font-family: 'Nunito Sans', sans-serif;
+  font-family: "Nunito Sans", sans-serif;
   scroll-behavior: smooth;
 }
 
@@ -20,311 +20,215 @@ ul {
 
 a {
   text-decoration: none;
-  color: #CBF7ED;
+  color: white;
 }
 
 .container {
-  height: 550vh;
-  display: -ms-grid;
+  position: relative;
+  margin: 0 auto;
   display: grid;
-      grid-template-areas: "sidebar" "content" "about" "skills" "projects" "contact" "footer";
-  -ms-grid-columns: 1fr;
-      grid-template-columns: 1fr;
-  -ms-grid-rows: 50px (1fr)[4] 670px 50px;
-      grid-template-rows: 50px repeat(4, 1fr) 670px 50px;
+  grid-template-areas: "sidebar" "home" "about" "skills" "projects" "contact" "footer";
+  grid-template-columns: 1fr;
+  grid-template-rows: 50px repeat(2, minmax(20rem, 40rem)) 40rem 100rem 1fr 50px;
   font-size: 2rem;
+  grid-gap: 5rem;
 }
 
 nav {
-  -ms-grid-row: 1;
-  -ms-grid-column: 1;
   grid-area: sidebar;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
   padding: 20px;
+  height: 30px;
+  margin-bottom: 4rem;
 }
-
 nav header {
   font-size: 0.9rem;
   color: white;
 }
-
 nav .burger-menu {
   width: 30px;
   height: 40px;
   background: none;
 }
-
 nav .burger-menu .burger-icons {
   display: block;
   position: relative;
   width: 100%;
 }
-
 nav .burger-menu .burger-icons .middle {
   width: 100%;
   background: transparent;
   height: 80%;
   color: transparent;
 }
-
 nav .burger-menu .burger-icons:after, nav .burger-menu .burger-icons:before {
   content: "";
   position: absolute;
   height: 2px;
   background: white;
 }
-
 nav .burger-menu .burger-icons:before {
   top: 0;
   right: 0;
   width: 50%;
   margin-top: 10px;
 }
-
 nav .burger-menu .burger-icons:after {
   top: 70%;
   right: 0;
   width: 90%;
   margin-bottom: 10px;
 }
-
 nav ul {
   display: none;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
   width: 50%;
 }
-
 nav ul li {
-  opacity: 0.7;
   font-size: 0.7rem;
 }
 
-nav ul li:hover {
-  opacity: 1;
+.hero {
+  grid-area: home;
+  padding: 1.5rem;
+  margin: 0 auto;
 }
-
-section.hero {
-  -ms-grid-row: 2;
-  -ms-grid-column: 1;
-  grid-area: content;
-  color: #8EA8C3;
-  width: 100%;
-  padding-top: 10px;
-}
-
-section.hero .avatar {
-  width: 200px;
-  height: 200px;
-  border-radius: 100px;
-  overflow: hidden;
-  margin: 10px 0 10px 0;
-}
-
-section.hero .avatar img {
-  position: relative;
-  width: 100%;
-  height: 100%;
-}
-
-section.hero .hero-content {
-  padding: 16px;
-}
-
-section.hero .hero-content h1 {
-  text-align: left;
+.hero h1 {
   font-weight: 700;
-  opacity: 1;
   color: white;
-  letter-spacing: 2px;
-  margin: 100px auto 20px auto;
+  letter-spacing: 0.2rem;
+  margin-top: 0;
   font-size: 2rem;
 }
-
-section.hero .hero-content span {
+.hero span {
   font-size: 1.5rem;
+  color: #406E8E;
+  font-weight: 700;
 }
-
-section.hero .hero-content p {
-  font-weight: 300;
-  letter-spacing: 2px;
-  margin: 10px auto 60px auto;
-  width: 70%;
-  font-size: 1.6rem;
+.hero p {
+  font-weight: 500;
+  letter-spacing: 0.2rem;
+  line-height: 1.5rem;
+  font-size: 1.2rem;
   text-align: left;
+  color: #d2d2d2;
+  margin-top: -1rem;
 }
-
-section.hero .hero-content a {
+.hero .div {
+  margin-top: 6rem;
+  text-align: center;
+}
+.hero .div a {
   background: #000000;
-  padding: 0.9rem 2.5rem;
   border-radius: 2rem;
+  padding: 1.1rem 2.5rem;
   border: none;
   outline: none;
-  font-size: 1rem;
-  color: white;
+  font-size: 0.7rem;
+  color: #d2d2d2;
   z-index: 5;
 }
 
-section.about {
-  -ms-grid-row: 3;
-  -ms-grid-column: 1;
+.about {
   grid-area: about;
   color: white;
-  text-align: left;
   padding: 16px;
 }
-
-section.about h1 {
+.about h1 {
   color: white;
   font-size: 2rem;
-  margin: 0;
+  text-align: left;
 }
-
-section.about p {
-  margin: 0 auto 0 auto;
-  padding-top: 30px;
-  width: 70%;
-  font-size: 1.6rem;
-  color: #8EA8C3;
-  font-weight: 300;
+.about p {
+  font-weight: 500;
+  letter-spacing: 0.2rem;
+  line-height: 1.5rem;
+  font-size: 1.2rem;
+  color: #d2d2d2;
 }
-
-section.about p span {
+.about p span {
   text-decoration: underline;
   color: #406E8E;
 }
 
-section.skills {
-  -ms-grid-row: 4;
-  -ms-grid-column: 1;
+.skills {
   grid-area: skills;
   padding: 16px;
   padding-top: 0;
   text-align: left;
 }
-
-section.skills h1 {
+.skills h1 {
   font-size: 2rem;
   color: white;
 }
-
-section.skills ul {
-  display: -webkit-box;
-  display: -ms-flexbox;
+.skills ul {
   display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  -webkit-box-pack: space-evenly;
-      -ms-flex-pack: space-evenly;
-          justify-content: space-evenly;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
   width: 80%;
-  margin: 0 auto 10px 0;
 }
-
-section.skills ul li {
+.skills ul li {
   font-size: 4rem;
   margin: 3px;
-  color: #000000;
-  padding: 10px 20px;
-  border-radius: 30px;
+  color: #d2d2d2;
+  padding: 10px;
 }
 
-section.projects {
-  -ms-grid-row: 5;
-  -ms-grid-column: 1;
+.projects {
   grid-area: projects;
   width: 100%;
 }
-
-section.projects h1 {
+.projects h1 {
   font-size: 2rem;
   color: white;
   text-align: left;
   padding-left: 16px;
 }
-
-section.projects .project-list {
-  display: -webkit-box;
-  display: -ms-flexbox;
+.projects .project-list {
   display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  -webkit-box-align: start;
-      -ms-flex-align: start;
-          align-items: flex-start;
-  -webkit-box-pack: space-evenly;
-      -ms-flex-pack: space-evenly;
-          justify-content: space-evenly;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  justify-content: space-evenly;
 }
-
-section.projects .project-list .project-card {
+.projects .project-list .project-card {
   text-align: center;
   width: 20rem;
   max-width: 28rem;
-  background: #000000;
+  background: #161925;
   height: 20rem;
   border-radius: 8px;
   margin: 20px auto 20px auto;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
+  flex-direction: column;
+  justify-content: space-around;
 }
-
-section.projects .project-list .project-card h1 {
+.projects .project-list .project-card h1 {
   font-size: 1.3rem;
   text-align: center;
 }
-
-section.projects .project-list .project-card p {
+.projects .project-list .project-card p {
   font-size: 14px;
-  color: #8EA8C3;
+  color: #d2d2d2;
   width: 80%;
   margin: 0 auto 5px auto;
   font-weight: 500;
 }
-
-section.projects .project-list .project-card .tech-list {
+.projects .project-list .project-card .tech-list {
   list-style: none;
   font-size: 12px;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   color: #CBF7ED;
   width: 50%;
   margin: 2px auto 0 auto;
   text-align: center;
 }
-
-section.projects .project-list .project-card .tech-list li {
+.projects .project-list .project-card .tech-list li {
   text-transform: uppercase;
   text-align: center;
   color: white;
@@ -332,49 +236,34 @@ section.projects .project-list .project-card .tech-list li {
   font-weight: 500;
   font-size: 18px;
 }
-
-section.projects .project-list .project-card .links a {
+.projects .project-list .project-card .links a {
   font-size: 12px;
   text-transform: uppercase;
   font-weight: 600;
   margin: 0 5px 5px 5px;
 }
 
-section.contact {
-  -ms-grid-row: 6;
-  -ms-grid-column: 1;
+.contact {
   grid-area: contact;
-  position: relative;
 }
-
-section.contact h1 {
+.contact h1 {
   text-align: left;
   color: white;
   font-size: 2rem;
   padding-left: 16px;
 }
-
-section.contact ul {
-  display: -webkit-box;
-  display: -ms-flexbox;
+.contact ul {
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  flex-direction: column;
+  align-items: center;
   color: #8EA8C3;
   padding: 0;
 }
-
-section.contact li {
+.contact li {
   color: #000000;
   font-size: 1.3rem;
 }
-
-section.contact .contact-form {
+.contact .contact-form {
   background: #000000;
   color: white;
   padding: 15px;
@@ -383,47 +272,26 @@ section.contact .contact-form {
   margin: 0 auto;
   max-width: 650px;
 }
-
-section.contact .details {
-  display: -webkit-box;
-  display: -ms-flexbox;
+.contact .details {
   display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
+  flex-direction: row;
+  flex-wrap: wrap;
   margin-bottom: 10px;
-  -webkit-box-align: start;
-      -ms-flex-align: start;
-          align-items: flex-start;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  align-items: flex-start;
+  justify-content: space-between;
 }
-
-section.contact .group-inputs {
-  display: -webkit-box;
-  display: -ms-flexbox;
+.contact .group-inputs {
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  flex-direction: column;
+  justify-content: space-between;
   width: 100%;
   margin: 0;
 }
-
-section.contact label {
+.contact label {
   font-size: 1.2rem;
   margin-top: 0.4rem;
 }
-
-section.contact input[type="text"], section.contact input[type="email"] {
+.contact input[type=text], .contact input[type=email] {
   color: white;
   background: #161925;
   border: none;
@@ -434,12 +302,10 @@ section.contact input[type="text"], section.contact input[type="email"] {
   max-width: 1110px;
   width: 100%;
 }
-
-section.contact .group-inputs.comment {
+.contact .group-inputs.comment {
   width: 100%;
 }
-
-section.contact #comment {
+.contact #comment {
   background: #161925;
   outline: none;
   border: none;
@@ -449,69 +315,43 @@ section.contact #comment {
   width: 100%;
   height: 100px;
 }
-
-section.contact #submit {
+.contact #submit {
   padding: 1rem 2rem;
   background: darkred;
   color: white;
   outline: none;
   border: none;
-  -ms-flex-item-align: end;
-      align-self: flex-end;
+  align-self: flex-end;
 }
 
 footer {
-  -ms-grid-row: 7;
-  -ms-grid-column: 1;
   grid-area: footer;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
   padding: 0 20px 0 20px;
+  height: 50px;
 }
-
 footer .header {
   color: white;
   font-size: 1rem;
   color: white;
   position: relative;
 }
-
 footer ul {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
 }
-
 footer ul li {
   font-size: 0.6rem;
   margin: 10px;
 }
-
 footer ul li:hover {
   opacity: 1;
 }
-
 footer ul li a i {
   color: #000000;
 }
@@ -523,7 +363,6 @@ footer ul li a i {
   height: 100vh;
   background: #000000;
 }
-
 .hidden-nav-pages .close {
   font-size: 3rem;
   color: white;
@@ -531,24 +370,16 @@ footer ul li a i {
   text-align: right;
   z-index: 83847474;
 }
-
 .hidden-nav-pages ul {
   width: 80%;
   height: 70%;
   padding: 0;
   text-align: center;
   margin: 0 auto 0 auto;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
+  flex-direction: column;
+  justify-content: space-around;
 }
-
 .hidden-nav-pages ul li, .hidden-nav-pages ul a {
   font-size: 1.5rem;
   color: white;
@@ -559,161 +390,34 @@ footer ul li a i {
 }
 
 @media only screen and (min-width: 720px) {
-  .hero-content h1 {
-    font-size: 25px;
-  }
-  .hero-content p, .hero-content a {
-    font-size: 20px;
-  }
   .container {
-        grid-template-areas: "sidebar" "content"  "about"  "skills"  "projects"  "contact"  "footer";
-    -ms-grid-columns: 1fr;
-        grid-template-columns: 1fr;
-    -ms-grid-rows: 120px (1fr)[3] 1fr 1fr 120px;
-        grid-template-rows: 120px repeat(3, 1fr) 1fr 1fr 120px;
-    height: 430vh;
-  }
-  .container nav {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
-    margin: 0 auto;
-    width: 100%;
-    max-width: 1000px;
-  }
-  .container nav header {
     position: relative;
-    font-size: 1.2rem;
+    margin: 0 auto;
+    display: grid;
+    grid-template-areas: "sidebar" "home" "about" "skills" "projects" "contact" "footer";
+    grid-template-columns: 1fr;
+    grid-template-rows: 50px repeat(2, minmax(20rem, 40rem)) 40rem minmax(40rem, 50rem) 1fr 50px;
+    font-size: 2rem;
+    grid-gap: 5rem;
   }
-  .container nav .burger-menu {
+
+  .navbar {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    padding: 20px;
+  }
+  .navbar .pages {
+    display: flex;
+  }
+  .navbar .burger-menu {
     display: none;
   }
-  .container nav ul {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
-    -ms-flex-pack: distribute;
-        justify-content: space-around;
-  }
-  .container nav ul li {
-    font-size: 17px;
-  }
-  .container section.hero {
-    padding: 0;
-  }
-  .container section.hero .hero-content {
-    margin: 2rem;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    -ms-flex-pack: distribute;
-        justify-content: space-around;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-  }
-  .container section.hero h1 {
-    margin-top: 4rem;
-    font-size: 5rem;
-  }
-  .container section.hero p {
-    width: 50%;
-  }
-  .container section.about {
-    text-align: center;
-  }
-  .container section.about h1 {
-    margin-top: 2rem;
-    font-size: 5rem;
-  }
-  .container section.about p {
-    margin-top: 5rem;
-    width: 50%;
-  }
-  .container section.skills {
-    -ms-grid-row: 4;
-    -ms-grid-column: 1;
-    grid-area: skills;
-    text-align: center;
-  }
-  .container section.skills h1 {
-    font-size: 5rem;
-    color: white;
-  }
-  .container section.skills ul {
-    width: 50%;
-    margin: 0 auto;
-  }
-  .container section.projects h1 {
-    font-size: 5rem;
-    text-align: center;
-  }
-  .container section.projects .project-list {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: start;
-        -ms-flex-pack: start;
-            justify-content: flex-start;
-    width: 80%;
-    margin: 0 auto;
-  }
-  .container section.contact h1 {
-    font-size: 5rem;
-    text-align: center;
-  }
-  .container footer {
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    padding: 0 20px 0 20px;
-    width: 100%;
-    max-width: 1000px;
-    margin: 0 auto;
-  }
-  .container footer .header {
-    font-size: 18px;
-  }
-  .container footer ul {
-    -webkit-box-pack: space-evenly;
-        -ms-flex-pack: space-evenly;
-            justify-content: space-evenly;
-  }
-  .container footer ul li {
-    font-size: 16px;
-  }
-  .project-card {
-    position: relative;
-    width: 250px;
-  }
-  .contact ul {
-    gap: 20px;
+
+  .hidden-nav-pages {
+    display: none;
   }
 }
+
 /*# sourceMappingURL=index.css.map */

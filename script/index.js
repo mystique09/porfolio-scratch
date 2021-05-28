@@ -23,3 +23,11 @@ closeBtn.addEventListener('click', function(){
 });
 
 // END NAVBAR
+
+// COMMING SOON PROJECTS SCRIPT
+
+function redirectToRick(){
+  window.location.href = "https://youtu.be/dQw4w9WgXcQ";
+}
+
+document.querySelectorAll('a.coming-soon').forEach(link=> link.onclick = redirectToRick);

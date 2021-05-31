@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
   <meta http-equiv="content-type" content="text/html; charset=utf-8" />
   <meta name="description" content="Hello, I am Benjie Ben from Philippines. I am a self-taught web developer, I started coding way back 2019. I am passionate in this career. ❤️">
@@ -9,6 +9,7 @@
   <link rel="icon" href="./images/portfolio-icon2.png">
   <link rel="shortcut icon" href="./images/shortcut_icon.png">
   <script src="https://kit.fontawesome.com/8fa8ba0057.js" crossorigin="anonymous"></script>
+  <script src="https://www.google.com/recaptcha/api.js" async defer></script>
 </head>
 <body>
   <div id="hidden-nav-pages" class="hidden-nav-pages hidden">
@@ -53,7 +54,8 @@
     </div>
     <div id="about" class="about">
       <h1>About Me</h1>
-      <p>I started studying programming way back 2019, I'm so curious on how websites, apps, servers and desktop application works so I did my best to study programming. I started with Lua programming language and after a month I switched to Javascript, perfect for Web development. I started joining discord groups to get ideas and have a circle of programming buddies. My skills and tech stack increases every year, you can see my skills below.
+      <p>
+        I started studying programming way back 2019, I'm so curious on how websites, apps, servers and desktop application works so I did my best to study programming. I started with Lua programming language and after a month I switched to Javascript, perfect for Web development. I started joining discord groups to get ideas and have a circle of programming buddies. My skills and tech stack increases every year, you can see my skills below.
       </p>
     </div>
     <div id="skills" class="skills">
@@ -139,7 +141,7 @@
     </div>
     <div id="contact" class="contact">
       <h1>Contact Me</h1>
-      <form class="contact-form">
+      <form id="contact_form" action="?" class="contact-form">
         <div class="details">
           <div class="group-inputs">
             <label for="name">Name</label>
@@ -159,7 +161,8 @@
           </div>
         </div>
         <div class="group-inputs">
-          <input type="submit" name="submit" id="submit" value="Submit" />
+         <div class="g-recaptcha" data-sitekey="6LdmlvwaAAAAAOf1D85N5RLmLvEdOh6Ca6MtNG-y"></div>
+          <button type="button" name="submit" id="submit">Submit</button>
         </div>
       </form>
     </div>

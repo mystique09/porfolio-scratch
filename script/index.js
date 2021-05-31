@@ -42,7 +42,8 @@ submitBtn.onclick = function(e) {
   const lastName = contact_form[1].value;
   const email = contact_form[2].value;
   const comment = contact_form[3].value;
-  
+  const captchaResponse = grecaptcha.getResponse();
+  console.log(captchaResponse)
   const template_params = {
       from_name: `${firstName} ${lastName}`,
       sender_email: email,
@@ -50,7 +51,7 @@ submitBtn.onclick = function(e) {
       message: comment
     }
   
-  const response = fetch('http://localhost:3000/api', {
+  const response = fetch('/api', {
       method: "POST",
       headers: {
         'Content-Type': 'application/json', 
@@ -61,7 +62,8 @@ submitBtn.onclick = function(e) {
         firstName,
         lastName, 
         email, 
-        comment
+        comment, 
+        captcha: captchaResponse
       })
     }).then(response => {
       alert('Email received!');

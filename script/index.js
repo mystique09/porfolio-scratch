@@ -51,7 +51,7 @@ submitBtn.onclick = function(e) {
       message: comment
     }
   
-  const response = fetch('/api', {
+  const response = fetch('https://emailjs-backend.herokuapp.com/api', {
       method: "POST",
       headers: {
         'Content-Type': 'application/json', 

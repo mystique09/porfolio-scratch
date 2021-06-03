@@ -1,26 +1,21 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;500;700&display=swap');
 
-$primary: #161925; //hsl(233, 47%, 7%);
-$card_bg: #23395B;//hsl(244, 38%, 16%);
-$secondary: #406E8E;//hsl(277, 64%, 61%);
-$heading_stat: #CBF7ED;//hsl(0, 0%, 100%);
-$main_para: #8EA8C3;//hsla(0, 0%, 100%, 0.75);
-$stat_heading: #f5cebe;//hsla(0, 0%, 100%, 0.6);
-$dark: #000000;
+// primary - #1C05EB - background and main elements
+// secondary - #E7E6F2 - 2nd level element, text and icons
+// ternary - #0583F2 - buttons, a tags
+
+$primary: #1C05EB;
+$secondary: #E7E6F2;
+$ternary: #0583F2;
 
 body {
   margin: 0;
   padding: 0;
   scroll-behavior: smooth;
-  background-color: #000000;
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100%25' height='100%25' viewBox='0 0 1600 800'%3E%3Cg %3E%3Cpolygon fill='%23220000' points='1600 160 0 460 0 350 1600 50'/%3E%3Cpolygon fill='%23440000' points='1600 260 0 560 0 450 1600 150'/%3E%3Cpolygon fill='%23660000' points='1600 360 0 660 0 550 1600 250'/%3E%3Cpolygon fill='%23880000' points='1600 460 0 760 0 650 1600 350'/%3E%3Cpolygon fill='%23A00' points='1600 800 0 800 0 750 1600 450'/%3E%3C/g%3E%3C/svg%3E");
-  //background-attachment: fixed;
-  background-size: cover;
 }
 
 * {
   font-family: 'Poppins', sans-serif;
-  scroll-behavior: smooth;
 }
 
 ul {
@@ -29,545 +24,301 @@ ul {
 
 a {
   text-decoration: none;
-  color: white;
+  color: $secondary;
 }
 
-.container {
-  position: relative;
-  margin: 0 auto;
+.flex-row {
+  display: flex;
+  flex-direction: row;
+}
+
+.flex-column {
+  display: flex;
+  flex-direction: column;
+}
+
+.wrap {
+  flex-wrap: wrap;
+}
+
+.grid {
   display: grid;
-  grid-template-areas:
-  "sidebar"
-  "home"
-  "about"
-  "skills"
-  "projects"
-  "contact"
-  "footer";
-  grid-template-columns: 1fr;
-  grid-template-rows: 30px repeat(2,minmax(20rem,40rem)) 40rem 100rem 1fr 50px;
-  font-size: 2rem;
-  grid-gap: 5rem;
-}
-
-nav {
-  position: relative;
-  grid-area: sidebar;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: space-between;
-  padding: 10px;
-  height: 30px;
-  background: $primary;
-
-  header {
-    font-size: 1.1rem;
-    color: white;
-  }
-
-  .burger-menu {
-    width: 30px;
-    height: 40px;
-    background: none;
-
-    .burger-icons {
-      display: block;
-      position: relative;
-      width: 100%;
-
-      .middle {
-        //visibility: hidden;
-        width: 100%;
-        background: transparent;
-        height: 80%;
-        color: transparent;
-      }
-
-      &:after,
-      &:before {
-        content: "";
-        position: absolute;
-        //width: 100%;
-        height: 2px;
-        background: white;
-      }
-
-      &:before {
-        top: 0;
-        right: 0;
-        width: 50%;
-        margin-top: 10px;
-      }
-
-      &:after {
-        top: 70%;
-        right: 0;
-        width: 90%;
-        margin-bottom: 10px;
-      }
-    }
-  }
-
-  ul {
-    display: none;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-around;
-    width: 50%;
-    li {
-      font-size: 0.9rem;
-      font-weight: 700;
-    }
-  }
-}
-
-.hero {
-  //position: relative;
-  grid-area: home;
-  //height: 100vh;
-  padding: 1.5rem;
-  margin: 0 auto;
-
-  h1 {
-    font-weight: 700;
-    color: white;
-    letter-spacing: 0.2rem;
-    margin-top: 0;
-    font-size: 2rem;
-  }
-
-  span {
-    font-size: 1.5rem;
-    color: $secondary;
-    font-weight: 700;
-  }
-
-  p {
-    font-weight: 500;
-    letter-spacing: 0.2rem;
-    line-height: 1.5rem;
-    font-size: 1.2rem;
-    text-align: left;
-    color: #d2d2d2;
-    margin-top: -1rem;
-  }
-
-  .div {
-    margin-top: 6rem;
-    text-align: center;
-    a {
-      border: none;
-      outline: none;
-      font-size: 1rem;
-      color: white;
-      z-index: 5;
-      text-decoration: underline;
-    }
-  }
-}
-
-.about {
-  grid-area: about;
-  //position: relative;
-  color: white;
-  padding: 16px;
-  //height: 100vh;
-
-  h1 {
-    color: white;
-    font-size: 2rem;
-    text-align: left;
-  }
-
-  p {
-    font-weight: 500;
-    letter-spacing: 0.2rem;
-    line-height: 1.5rem;
-    font-size: 1.2rem;
-    color: #d2d2d2;
-
-    span {
-      text-decoration: underline;
-      color: $secondary;
-    }
-  }
-}
-
-.skills {
-  grid-area: skills;
-  padding: 16px;
-  padding-top: 0;
-  text-align: left;
-
-  h1 {
-    font-size: 2rem;
-    color: white;
-  }
-
-  ul {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: space-evenly;
-    width: 80%;
-    
-    li {
-      font-size: 4rem;
-      color: #d2d2d2;
-      padding: 10px;
-    }
-  }
-}
-
-.projects {
-  grid-area: projects;
-  width: 100%;
-
-  h1 {
-    font-size: 2rem;
-    color: white;
-    margin: 5rem auto;
-    padding-left: 16px;
-  }
-
-  .project-list {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: flex-start;
-    justify-content: space-around;
-    //gap: 1px;
-    gap: 2rem;
-
-    .project-card {
-      text-align: center;
-      width: 20rem;
-      max-width: 28rem;
-      background: $primary;
-      height: 20rem;
-      border-radius: 8px;
-      //margin: 20px auto 20px auto;
-      display: flex;
-      flex-direction: column;
-      justify-content: space-evenly;
-      
-      h1 {
-        font-size: 1.3rem;
-        margin: 0 auto;
-      }
-
-      p {
-        font-size: 14px;
-        color: #d2d2d2;
-        width: 80%;
-        margin: 0 auto 5px auto;
-        font-weight: 500;
-      }
-
-      .tech-list {
-        list-style: none;
-        font-size: 12px;
-        display: flex;
-        color: $heading_stat;
-        width: 50%;
-        margin: 2px auto 0 auto;
-        text-align: center;
-        li {
-          text-transform: uppercase;
-          text-align: center;
-          color: white;
-          padding: 8px;
-          font-weight: 500;
-          font-size: 18px;
-        }
-      }
-
-      .links {
-        //margin-top: -10px;
-        a {
-          font-size: 12px;
-          text-transform: uppercase;
-          font-weight: 600;
-          margin: 0 5px 5px 5px;
-        }
-      }
-    }
-  }
-}
-
-.contact {
-  grid-area: contact;
-
-  h1 {
-    text-align: left;
-    color: white;
-    font-size: 2rem;
-    padding-left: 16px;
-  }
-  ul {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    color: $main_para;
-    padding: 0;
-  }
-  li {
-    color: $dark;
-    font-size: 1.3rem;
-  }
-
-  .contact-form {
-    background: $dark;
-    color: white;
-    padding: 15px;
-    font-size: 1.2rem;
-    width: 90%;
-    margin: 0 auto;
-    max-width: 650px;
-  }
-
-  .details {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    margin-bottom: 10px;
-    align-items: flex-start;
-    justify-content: space-between;
-  }
-
-  .group-inputs {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    width: 100%;
-    margin: 0;
-  }
-
-  label {
-    font-size: 1.2rem;
-    margin-top: 0.4rem;
-  }
-
-  input[type="text"], input[type="email"] {
-    color: white;
-    background: $primary;
-    border: none;
-    outline: none;
-    height: 30px;
-    padding: 5px;
-    font-size: 1rem;
-    max-width: 1110px;
-    width: 100%;
-  }
-
-  .group-inputs.comment {
-    width: 100%;
-  }
-
-  #comment {
-    background: $primary;
-    outline: none;
-    border: none;
-    color: white;
-    font-size: 0.8rem;
-    max-width: 1110px;
-    width: 100%;
-    height: 100px;
-  }
-
-  #submit {
-    padding: 1rem 2rem;
-    background: darkred;
-    color: white;
-    outline: none;
-    border: none;
-    align-self: flex-end;
-    font-weight: 500;
-  }
-}
-
-.footer {
-  position: relative;
-  grid-area:footer;
-  background: $primary;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: space-between;
-  padding: 0 20px 0 20px;
-  height: 50px;
-
-  .header {
-    color: white;
-    font-size: 1rem;
-    color: white;
-    position: relative;
-  }
-
-  ul {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-between;
-
-    li {
-      font-size: 0.6rem;
-      margin: 10px;
-      a {
-        i {
-          color: white;
-        }
-      }
-    }
-  }
-}
-
-.hidden-nav-pages {
-  position: fixed;
-  z-index: 28733;
-  width: 100vw;
-  height: 100vh;
-  background: $dark;
-  //display: none;
-
-  .close {
-    font-size: 3rem;
-    color: white;
-    margin-right: 20px;
-    text-align: right;
-    z-index: 83847474;
-  }
-
-  ul {
-    width: 80%;
-    height: 70%;
-    padding: 0;
-    text-align: center;
-    margin: 0 auto 0 auto;
-
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-
-    li, a {
-      font-size: 1.5rem;
-      color: white;
-    }
-  }
 }
 
 .hidden {
   display: none;
 }
 
-// DESKTOP RESPONSIVE Layout
-@media only screen and (min-width: 720px) {
-  .container {
-    position: relative;
-    margin: 0 auto;
-    display: grid;
-    grid-template-areas:
-    "sidebar"
-    "home"
-    "about"
-    "skills"
-    "projects"
-    "contact"
-    "footer";
-    grid-template-columns: 1fr;
-    grid-template-rows: 50px repeat(2,minmax(20rem,40rem)) 40rem minmax(40rem,50rem) 1fr 50px;
-    font-size: 2rem;
-    grid-gap: 5rem;
-    margin: 0 auto;
-    max-width: 1110px;
-  }
+.rounded {
+  border: none;
+  outline: none;
+  padding: 0.5rem 2rem;
+  
+  color: $secondary;
+  background: $ternary;
+  
+  border-radius: 0.2rem;
+}
 
-  .navbar {
-    display: flex;
-    flex-direction: row;
+.full-width {
+  width: 100vw;
+}
+
+.full-height {
+  height: 100vh;
+}
+
+/*
+  Nav menu Modal Mobile design
+*/
+.nav-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100vw;
+  background: $primary;
+  touch-action: none;
+  
+  // grid config
+  grid-template-columns: repeat(3, 1fr) 20px;
+  grid-template-rows: 20px 1fr;
+  
+  .close {
+    grid-column: 4/span 5;
+    margin-right: 10px;
+    color: $secondary;
+    font-size: 2.5rem;
+  }
+  
+  .links {
+    grid-column: 1/span 3;
+    font-size: 1.5rem;
+    list-style: none;
+    
+    // flex
     align-items: center;
-    justify-content: space-around;
-    padding: 20px;
-    width: 100%;
-  //max-width: 1110px;
-    margin: 0 auto;
-  //margin-bottom: 4rem;
-    
-    .pages {
-      display: flex;
-    }
-    
-    .burger-menu {
-      display: none;
-    }
-  }
-
-  .hidden-nav-pages{
-    display: none;
+    justify-content: space-evenly;
   }
   
-  .hero {
-    h1 {
-      margin: 5rem auto;
-    }
-    p {
-      margin: 0 auto;
-    }
-    h1, p {
-      max-width: 80%;
-    }
-  }
-  
-  .about {
-    h1 {
-      margin: 5rem auto;
-    }
-    p {
-      margin: 0 auto;
-    }
-    h1, p {
-      max-width: 80%;
-    }
-  }
-  
-  .skills {
-    h1, ul {
-      max-width: 80%;
-    }
-    h1 {
-      margin: 5rem auto;
-    }
-    ul {
-      margin: 0 auto;
-    }
-  }
-  
-  .projects {
-    h1 {
-      margin: 5rem auto;
-    }
-    .project-list {
-      margin: 0 auto;
-    }
-    h1, .project-list {
-      max-width: 80%;
-    }
-  }
-  
-  .contact {
-    h1 {
-      margin: 5rem auto;
-    }
-    form {
-      margin: 0 auto;
-    }
-    h1, form {
-      max-width: 80%;
-    }
-  }
-  
-  .footer {
-    justify-content: space-between;
-    width: 100%;
+  .modal-link {
+    color: $secondary;
+    text-decoration: none;
   }
 }
+/*
+  NAV menu modal, mobile design end
+*/
+
+/*
+  NavBar mobile design
+*/
+.navbar {
+  background: $primary;
+  max-width: 1240px;
+  color: $secondary;
+  align-items: center;
+  padding: 0.5rem;
+  
+  .logo {
+    font-size: 2rem;
+    margin-right: auto;
+  }
+  
+  ul {
+    margin-right: 0;
+    justify-content: space-between;
+  }
+  
+  .menu {
+    height: 100%;
+    width: 50px;
+    align-items: center;
+    justify-content: space-evenly;
+    
+    &:before, &:after {
+      content: '';
+      position: relative;
+      height: 2px;
+      width: 70%;
+      background: $secondary;
+      border-radius: 2rem;
+    }
+    
+    &:before{
+      top: 0;
+      left: 0;
+    }
+    &:after {
+      bottom: 0;
+      left: 0;
+    }
+  }
+}
+
+/* FOOTER DESIGN */
+.footer {
+  background: $primary;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1240px;
+  //position: absolute;
+  //top: 100%;
+  width: 100%;
+  
+  h2 {
+    color: $secondary;
+  }
+  
+  ul {
+    color: white;
+    justify-content: space-between;
+  }
+  
+  li {
+    margin: 0.2rem;
+    padding: 0.3rem;
+  }
+}
+/*FOOTER DESIGN END */
+
+/*
+  NavBar mobile design end
+*/
+
+/*
+  CONTAINER CONFIG
+*/
+.container {
+  max-width: 1240px;
+  margin: 0 auto;
+  //height: 100vh;
+  grid-template-columns: repeat(4, 1fr);
+  overflow-x: scroll;
+}
+
+.home,.about,.projects,.contact {
+  //height: 100%;
+  width: 100vw;
+}
+/*
+  CONTAINER END
+*/
+
+/*
+  Home Mobile DESIGN
+*/
+.home {
+  
+  background: linear-gradient(250deg, $primary, $ternary);
+  
+  h1 {
+    font-size: 4rem;
+    padding: 0.4rem;
+    text-align: left;
+    color: white;
+  }
+  
+  p {
+    font-size: 1.5rem;
+    padding: 0.4rem;
+    color: $secondary;
+    line-height: 2.5rem;
+    width: 95%;
+    //box-shadow: 10px 10px 80px rgba(0,0,0,0.4);
+  }
+  
+  div {
+    //margin-top: 2rem;
+    justify-content: space-evenly;
+    align-items: center;
+    //border: 1px solid red;
+  }
+  
+  a {
+    //margin-top: 2rem;
+    padding: 0.8rem 2.5rem;
+    box-shadow: -10px 10px 15px rgba(0,0,0,0.5);
+  }
+}
+/*
+  HOME mobile DESIGN END
+*/
+
+/*
+  ABOUT Me mobile DESIGN
+*/
+.about {
+  
+  background: linear-gradient(45deg, $primary, $ternary);
+ 
+ h1 {
+   color: white;
+   font-size: 4rem;
+   text-align: center;
+ }
+ 
+ p{
+   color: $secondary;
+   font-size: 1.5rem;
+   padding: 0.4rem;
+   line-height: 2.5rem;
+ }
+}
+/*
+  ABOUT Me mobile DESIGN END
+*/
+
+/*
+  PROJECTS MOBILE DESIGN
+*/
+.projects {
+  
+  background: linear-gradient(250deg, $primary, $ternary);
+  h1 {
+    font-size: 4rem;
+    text-align: center;
+    color: white;
+  }
+  
+  .project-list {
+    padding: 1rem;
+    gap: 0.8rem;
+    overflow-x: hidden;
+    overflow-y: auto;
+  }
+
+  .card {
+    width: 135px;
+    max-width: 270px;
+    background: $ternary;
+    border-radius: 0.4rem;
+    box-shadow: -10px 10px 8px rgba(0,0,0,0.7), 
+    -10px 20px 30px rgba(0,0,0,0.2);
+    padding: 0.6rem;
+    
+    h3 {
+      color: white;
+      font-size: 1.5rem;
+      text-align: center;
+    }
+    
+    p {
+      color: $secondary;
+      font-size: 1rem;
+    }
+  }
+}
+/*
+  project mobile design end
+*/
+
+/*
+  CONTACT ME MOBILE DESIGN
+*/
+.contact {
+  
+}
+/*
+  CONTACT ME MOBILE DESIGN END
+*/

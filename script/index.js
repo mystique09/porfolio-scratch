@@ -1,9 +1,9 @@
 // NAVBAR
 
-const showBtn = document.getElementById('burger-menu');
-const hiddenNavMobile = document.getElementById('hidden-nav-pages');
+const showBtn = document.getElementById('menu');
+const hiddenNavMobile = document.getElementById('nav-modal');
 const closeBtn = document.querySelector('.close');
-const hiddenNavLinks = document.querySelectorAll('.hidden-nav-pages > ul > li > .hidden-nav-links');
+const hiddenNavLinks = document.querySelectorAll('.links > .modal-link');
 
 hiddenNavMobile.classList.add('hidden');
 
@@ -37,13 +37,14 @@ let submitBtn = document.getElementById('submit');
 
 submitBtn.onclick = function(e) {
   e.preventDefault();
-  console.log('Clicked!');
   const firstName = contact_form[0].value;
   const lastName = contact_form[1].value;
   const email = contact_form[2].value;
   const comment = contact_form[3].value;
   const captchaResponse = grecaptcha.getResponse();
-  console.log(captchaResponse)
+  
+  if(!captchaResponse)return;
+  
   const template_params = {
       from_name: `${firstName} ${lastName}`,
       sender_email: email,
@@ -66,7 +67,12 @@ submitBtn.onclick = function(e) {
         captcha: captchaResponse
       })
     }).then(response => {
-      alert('Email received!');
+      if(response.data === "OK"){
+        alert('Email received!');
+        return;
+      }
+      alert(`Cannot send email, ${response.data}`);
+      return;
     }).catch(error => {
       alert('Unable to send!');
     });

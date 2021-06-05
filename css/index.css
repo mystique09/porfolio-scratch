@@ -3,9 +3,10 @@ body {
   margin: 0;
   padding: 0;
   scroll-behavior: smooth;
-  background-color: #000000;
+  /*background-color: #000000;
   background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100%25' height='100%25' viewBox='0 0 1600 800'%3E%3Cg %3E%3Cpolygon fill='%23220000' points='1600 160 0 460 0 350 1600 50'/%3E%3Cpolygon fill='%23440000' points='1600 260 0 560 0 450 1600 150'/%3E%3Cpolygon fill='%23660000' points='1600 360 0 660 0 550 1600 250'/%3E%3Cpolygon fill='%23880000' points='1600 460 0 760 0 650 1600 350'/%3E%3Cpolygon fill='%23A00' points='1600 800 0 800 0 750 1600 450'/%3E%3C/g%3E%3C/svg%3E");
-  background-size: cover;
+  //background-attachment: fixed;
+  background-size: cover;*/
 }
 
 * {
@@ -30,7 +31,6 @@ a {
   grid-template-columns: 1fr;
   grid-template-rows: 30px repeat(2, minmax(20rem, 40rem)) 40rem 100rem 1fr 50px;
   font-size: 2rem;
-  grid-gap: 5rem;
 }
 
 nav {
@@ -42,7 +42,7 @@ nav {
   justify-content: space-between;
   padding: 10px;
   height: 30px;
-  background: #161925;
+  background: linear-gradient(45deg, #1C05EB, #0583F2);
 }
 nav header {
   font-size: 1.1rem;
@@ -98,17 +98,18 @@ nav ul li {
   grid-area: home;
   padding: 1.5rem;
   margin: 0 auto;
+  background: linear-gradient(230deg, #000000, #1C05EB);
 }
-.hero h1 {
+.hero h2 {
   font-weight: 700;
   color: white;
   letter-spacing: 0.2rem;
-  margin-top: 0;
+  margin-top: 2rem;
   font-size: 2rem;
 }
 .hero span {
   font-size: 1.5rem;
-  color: #406E8E;
+  color: #E7E6F2;
   font-weight: 700;
 }
 .hero p {
@@ -117,7 +118,7 @@ nav ul li {
   line-height: 1.5rem;
   font-size: 1.2rem;
   text-align: left;
-  color: #d2d2d2;
+  color: #E7E6F2;
   margin-top: -1rem;
 }
 .hero .div {
@@ -135,10 +136,11 @@ nav ul li {
 
 .about {
   grid-area: about;
-  color: white;
+  color: linear-gradient(230deg, #000000, #1C05EB);
   padding: 16px;
+  background: linear-gradient(210deg, #0583F2, #000000);
 }
-.about h1 {
+.about h2 {
   color: white;
   font-size: 2rem;
   text-align: left;
@@ -152,18 +154,19 @@ nav ul li {
 }
 .about p span {
   text-decoration: underline;
-  color: #406E8E;
+  color: #E7E6F2;
 }
 
 .skills {
+  background: linear-gradient(60deg, #E7E6F2, #0583F2);
   grid-area: skills;
   padding: 16px;
   padding-top: 0;
   text-align: left;
 }
-.skills h1 {
+.skills h2 {
   font-size: 2rem;
-  color: white;
+  color: linear-gradient(230deg, #000000, #1C05EB);
 }
 .skills ul {
   display: flex;
@@ -174,15 +177,16 @@ nav ul li {
 }
 .skills ul li {
   font-size: 4rem;
-  color: #d2d2d2;
+  color: linear-gradient(90deg, #0583F2, #1C05EB);
   padding: 10px;
 }
 
 .projects {
   grid-area: projects;
   width: 100%;
+  background: linear-gradient(180deg, #0583F2, #E7E6F2);
 }
-.projects h1 {
+.projects h2 {
   font-size: 2rem;
   color: white;
   margin: 5rem auto;
@@ -199,20 +203,21 @@ nav ul li {
   text-align: center;
   width: 20rem;
   max-width: 28rem;
-  background: #161925;
+  background: #1C05EB;
   height: 20rem;
   border-radius: 8px;
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
 }
-.projects .project-list .project-card h1 {
+.projects .project-list .project-card h3 {
   font-size: 1.3rem;
   margin: 0 auto;
+  color: #E7E6F2;
 }
 .projects .project-list .project-card p {
   font-size: 14px;
-  color: #d2d2d2;
+  color: #E7E6F2;
   width: 80%;
   margin: 0 auto 5px auto;
   font-weight: 500;
@@ -221,7 +226,7 @@ nav ul li {
   list-style: none;
   font-size: 12px;
   display: flex;
-  color: #CBF7ED;
+  color: #E7E6F2;
   width: 50%;
   margin: 2px auto 0 auto;
   text-align: center;
@@ -243,10 +248,12 @@ nav ul li {
 
 .contact {
   grid-area: contact;
+  padding-bottom: 4rem;
+  background: #E7E6F2;
 }
-.contact h1 {
+.contact h2 {
   text-align: left;
-  color: white;
+  color: #000000;
   font-size: 2rem;
   padding-left: 16px;
 }
@@ -254,15 +261,16 @@ nav ul li {
   display: flex;
   flex-direction: column;
   align-items: center;
-  color: #8EA8C3;
+  color: #E7E6F2;
   padding: 0;
 }
 .contact li {
-  color: #000000;
+  color: #E7E6F2;
   font-size: 1.3rem;
 }
 .contact .contact-form {
-  background: #000000;
+  margin-bottom: 2rem;
+  background: #1C05EB;
   color: white;
   padding: 15px;
   font-size: 1.2rem;
@@ -290,8 +298,8 @@ nav ul li {
   margin-top: 0.4rem;
 }
 .contact input[type=text], .contact input[type=email] {
-  color: white;
-  background: #161925;
+  color: #000000;
+  background: #E7E6F2;
   border: none;
   outline: none;
   height: 30px;
@@ -304,10 +312,10 @@ nav ul li {
   width: 100%;
 }
 .contact #comment {
-  background: #161925;
+  background: #E7E6F2;
   outline: none;
   border: none;
-  color: white;
+  color: #000000;
   font-size: 0.8rem;
   max-width: 1110px;
   width: 100%;
@@ -315,7 +323,7 @@ nav ul li {
 }
 .contact #submit {
   padding: 1rem 2rem;
-  background: darkred;
+  background: #0583F2;
   color: white;
   outline: none;
   border: none;
@@ -326,7 +334,7 @@ nav ul li {
 .footer {
   position: relative;
   grid-area: footer;
-  background: #161925;
+  background: #1C05EB;
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -359,7 +367,8 @@ nav ul li {
   z-index: 28733;
   width: 100vw;
   height: 100vh;
-  background: #000000;
+  background: #1C05EB;
+  touch-action: none;
 }
 .hidden-nav-pages .close {
   font-size: 3rem;
@@ -396,9 +405,6 @@ nav ul li {
     grid-template-columns: 1fr;
     grid-template-rows: 50px repeat(2, minmax(20rem, 40rem)) 40rem minmax(40rem, 50rem) 1fr 50px;
     font-size: 2rem;
-    grid-gap: 5rem;
-    margin: 0 auto;
-    max-width: 1110px;
   }
 
   .navbar {
@@ -408,7 +414,6 @@ nav ul li {
     justify-content: space-around;
     padding: 20px;
     width: 100%;
-    margin: 0 auto;
   }
   .navbar .pages {
     display: flex;
